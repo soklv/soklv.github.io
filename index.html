@@ -3,27 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>sok.lv</title>
-<meta name="description" content="sok.lv — something is taking shape under this domain.">
+<title>sok.lv — small, free learning sites</title>
+<meta name="description" content="sok.lv is the home of two free learning sites: ELI5 — big ideas explained like you're five, and Book850 — a novel that teaches itself with the 850 words of Basic English.">
 <link rel="canonical" href="https://www.sok.lv/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="sok.lv">
-<meta property="og:description" content="Something is taking shape under this domain.">
+<meta property="og:description" content="Two free learning sites live under this roof: ELI5 explainers and Book850, the novel that teaches itself.">
 <meta property="og:url" content="https://www.sok.lv/">
 <meta property="og:site_name" content="sok.lv">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0f1720" media="(prefers-color-scheme: dark)">
 <style>
-:root{--bg:#f8fafc;--fg:#0f172a;--mut:#64748b;--card:#ffffff;--bdr:#e2e8f0}
-@media(prefers-color-scheme:dark){:root{--bg:#0f1720;--fg:#e5e9f0;--mut:#8b98a9;--card:#16202c;--bdr:#253041}}
+:root{--bg:#f8fafc;--fg:#0f172a;--mut:#64748b;--card:#ffffff;--bdr:#e2e8f0;--acc:#2563eb}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1720;--fg:#e5e9f0;--mut:#8b98a9;--card:#16202c;--bdr:#253041;--acc:#60a5fa}}
 *{box-sizing:border-box}
 body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--fg)}
 main{max-width:44rem;margin:0 auto;padding:3.5rem 1.25rem}
 h1{font-size:2.2rem;line-height:1.2;margin:0 0 .5rem}
 .sub{color:var(--mut);font-size:1.05rem;margin:0 0 2rem}
 .card{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:1.25rem 1.4rem;margin:0 0 1.5rem}
+.card h2{margin:0 0 .4rem;font-size:1.25rem}
+.card h2 a{color:var(--fg);text-decoration:none}
+.card h2 a:hover{text-decoration:underline}
+.card .mut{color:var(--mut);font-size:.9rem;font-weight:400}
 .card p{margin:.35rem 0}
+.card a{color:var(--acc);text-decoration:none}
+.card a:hover{text-decoration:underline}
+.note{color:var(--mut);font-size:.95rem;margin:1.75rem 0 0}
 footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 </style>
 <!-- Google tag (gtag.js) -->
@@ -38,12 +45,21 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <body>
 <main>
 <h1>sok.lv</h1>
-<p class="sub">A quiet corner of the internet.</p>
+<p class="sub">A small corner of the internet where learning stays simple. Two sites live here &mdash; both free, both made to be read in plain English.</p>
+
 <div class="card">
-<p>Something is taking shape under this domain.</p>
-<p>Check back soon.</p>
+<h2><a href="https://eli5.sok.lv/">ELI5</a> <span class="mut">&middot; eli5.sok.lv</span></h2>
+<p>Big ideas explained like you're five &mdash; astronomy, linguistics, AI, crypto, biochemistry and more. Short illustrated stories, each paired with a video on the <a href="https://www.youtube.com/channel/UC7WKNYA4l_NDQjVQEaKJJ3w">KraSer channel</a>.</p>
 </div>
-<footer>© sok.lv</footer>
+
+<div class="card">
+<h2><a href="https://be850.sok.lv/">Book850</a> <span class="mut">&middot; be850.sok.lv</span></h2>
+<p>The book begins with one word. 850 chapters, 850 words, one story &mdash; told only with Ogden's Basic English, adding a single new word per chapter. Every chapter comes with its video, so the book teaches itself.</p>
+</div>
+
+<p class="note">Everything is free to read and watch &mdash; no sign-up, nothing to install. More may take root here later.</p>
+
+<footer>&copy; sok.lv</footer>
 </main>
 </body>
 </html>
