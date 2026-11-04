@@ -48,11 +48,12 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <main>
 <h1>Paper trading</h1>
 <p class="sub">A simulated portfolio on real prices &mdash; a separate desk from the horoscope and the markets digest. Started with 1,000.00 paper USDT.</p>
+<p class="note"><b>Live desk:</b> trades <b>forward only</b> since 2026-11-04 &mdash; one decision per closed daily candle, the past is never replayed. (A one-off 30-day warm-up replay ran on launch morning, found the equity bug, and was archived to <code>paper/archive/</code>; it is not part of this ledger.)</p>
 
 <div class="warn"><b>Simulation, not real trading.</b> Paper money only. Fills are simulated at the daily close price with a 0.1% fee and no slippage. Nothing here is investment advice &mdash; it is a public experiment in discipline and record-keeping.</div>
 
 <h2 class="sec">Status</h2>
-<p><b>Equity: 977.25 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-2.27%</span> &middot; cash 802.82 USDT &middot; prices as of 2026-11-03 close, page built 04 Nov 2026 10:26 UTC.</p>
+<p><b>Equity: 1,000.00 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="up">+0.00%</span> &middot; cash 1,000.00 USDT &middot; prices as of 2026-11-03 close, page built 04 Nov 2026 10:55 UTC.</p>
 
 <h2 class="sec">The fixed rules (v1.1)</h2>
 <p>1. Universe: BTC / USDT, ETH / USDT &mdash; real daily closes from a public exchange API (no account, no keys).</p>
@@ -64,26 +65,26 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <h2 class="sec">Open positions</h2>
 <table>
 <tr><th>Asset</th><th>Qty</th><th>Avg cost</th><th>Last close</th><th>Value</th><th>Weight</th></tr>
-<tr><td>BTC / USDT</td><td>0.00221929</td><td>85,247.98</td><td>78,580.04</td><td>174.39</td><td>18%</td></tr><tr><td>ETH / USDT</td><td>1.625e-05</td><td>2,704.61</td><td>2,331.05</td><td>0.04</td><td>0%</td></tr>
+<tr><td colspan="6">No open positions yet — waiting for a signal.</td></tr>
 </table>
 
 <h2 class="sec">Recent decisions</h2>
 <table>
 <tr><th>Date</th><th>Run</th><th>Action</th><th>Asset</th><th>Qty</th><th>Price</th><th>Why</th></tr>
-<tr><td>2026-10-29</td><td>warm-up</td><td class="dn">SELL</td><td>ETH</td><td>1.625e-05</td><td>2,226.83</td><td>7d return -7.5% < -5% -> cut position in half</td></tr><tr><td>2026-10-27</td><td>warm-up</td><td class="dn">SELL</td><td>ETH</td><td>3.25e-05</td><td>2,334.98</td><td>7d return -7.1% < -5% -> cut position in half</td></tr><tr><td>2026-10-20</td><td>warm-up</td><td class="up">BUY</td><td>BTC</td><td>0.00105388</td><td>84,545.78</td><td>7d +3.6% > +1% and close > 30d average (83534)</td></tr><tr><td>2026-10-18</td><td>warm-up</td><td class="dn">SELL</td><td>ETH</td><td>6.499e-05</td><td>2,394.46</td><td>7d return -5.4% < -5% -> cut position in half</td></tr><tr><td>2026-10-17</td><td>warm-up</td><td class="dn">SELL</td><td>ETH</td><td>0.00012998</td><td>2,379.73</td><td>7d return -6.1% < -5% -> cut position in half</td></tr><tr><td>2026-10-13</td><td>warm-up</td><td class="dn">SELL</td><td>ETH</td><td>0.00025998</td><td>2,429.81</td><td>7d return -5.5% < -5% -> cut position in half</td></tr><tr><td>2026-10-12</td><td>warm-up</td><td class="dn">SELL</td><td>ETH</td><td>0.00051994</td><td>2,516.47</td><td>7d return -6.9% < -5% -> cut position in half</td></tr><tr><td>2026-10-11</td><td>warm-up</td><td class="dn">SELL</td><td>ETH</td><td>0.00103989</td><td>2,530.47</td><td>7d return -6.2% < -5% -> cut position in half</td></tr><tr><td>2026-10-10</td><td>warm-up</td><td class="dn">SELL</td><td>ETH</td><td>0.00207978</td><td>2,535.63</td><td>7d return -6.0% < -5% -> cut position in half</td></tr><tr><td>2026-10-09</td><td>warm-up</td><td class="dn">SELL</td><td>ETH</td><td>0.00415955</td><td>2,511.92</td><td>7d return -6.3% < -5% -> cut position in half</td></tr><tr><td>2026-10-08</td><td>warm-up</td><td class="dn">SELL</td><td>ETH</td><td>0.00831912</td><td>2,489.00</td><td>7d return -7.7% < -5% -> cut position in half</td></tr><tr><td>2026-10-07</td><td>warm-up</td><td class="dn">SELL</td><td>ETH</td><td>0.01663823</td><td>2,435.41</td><td>7d return -9.2% < -5% -> cut position in half</td></tr>
+<tr><td colspan="7">No trades yet.</td></tr>
 </table>
 
 <h2 class="sec">Equity log</h2>
 <table>
 <tr><th>Day</th><th>Equity, USDT</th><th>P&amp;L</th></tr>
-<tr><td>2026-11-03</td><td>977.25</td><td>-2.28%</td></tr><tr><td>2026-11-02</td><td>975.28</td><td>-2.47%</td></tr><tr><td>2026-11-01</td><td>974.87</td><td>-2.51%</td></tr><tr><td>2026-10-31</td><td>975.90</td><td>-2.41%</td></tr><tr><td>2026-10-30</td><td>975.06</td><td>-2.49%</td></tr><tr><td>2026-10-29</td><td>975.11</td><td>-2.49%</td></tr><tr><td>2026-10-28</td><td>984.33</td><td>-1.57%</td></tr><tr><td>2026-10-27</td><td>981.64</td><td>-1.84%</td></tr><tr><td>2026-10-26</td><td>981.65</td><td>-1.83%</td></tr><tr><td>2026-10-25</td><td>981.35</td><td>-1.86%</td></tr>
+<tr><td colspan="3">Coming with the first days.</td></tr>
 </table>
 
 <h2 class="sec">Self-review</h2>
 <p>Every daily run replays the whole ledger, recomputes the equity from real prices, re-checks the rules, data freshness and page integrity &mdash; and repairs what it can automatically. Findings and fixes land as commits, so the review itself is auditable.</p>
-<p><b>Last review</b> 2026-11-04 10:26 UTC: LEDGER PASS &middot; EQUITY FIXED (max drift 182.04 USDT) &middot; RULES PASS &middot; FRESH PASS &middot; PAGE PASS &middot; SITEMAP PASS</p>
-<p><b>Same-window yardstick (2026-10-05..2026-11-03):</b> desk <b>-2.28%</b> vs hold BTC -8.42% / hold ETH -13.81% &middot; max drawdown -2.51% &middot; avg exposure 15.0% of equity &middot; SELL win rate 0.0% &middot; fees paid 0.36 USDT</p>
-<p class="note">Auto-repairs in the last run: equity_history recomputed from real closes.</p>
+<p><b>Last review</b> 2026-11-04 10:55 UTC: LEDGER PASS &middot; EQUITY PASS &middot; RULES PASS &middot; FRESH PASS &middot; PAGE PASS &middot; SITEMAP PASS</p>
+<p><b>Same-window yardstick (n/a):</b> desk <b>n/a</b> vs hold BTC n/a / hold ETH n/a &middot; max drawdown n/a &middot; avg exposure n/a of equity &middot; SELL win rate n/a &middot; fees paid n/a</p>
+
 
 <h2 class="sec">Honest limits</h2>
 <p>Daily-close fills only: no intraday prices, no slippage, no partial-fill quirks, funding rates not modelled. A position under 1 USDT would not even be accepted by a real exchange &mdash; rules v1.1 closes it in full. Real trading would differ. That is exactly why this desk is labelled paper everywhere.</p>
