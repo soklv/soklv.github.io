@@ -53,14 +53,15 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <div class="warn"><b>Simulation, not real trading.</b> Paper money only. Fills are simulated at the daily close price with a 0.1% fee and no slippage. Nothing here is investment advice &mdash; it is a public experiment in discipline and record-keeping.</div>
 
 <h2 class="sec">Status</h2>
-<p><b>Equity: 1,000.00 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="up">+0.00%</span> &middot; cash 1,000.00 USDT &middot; prices as of 2026-11-03 close, page built 04 Nov 2026 11:42 UTC.</p>
+<p><b>Equity: 1,000.00 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="up">+0.00%</span> &middot; cash 1,000.00 USDT &middot; prices as of 2026-11-03 close, page built 04 Nov 2026 12:00 UTC.</p>
 
-<h2 class="sec">The fixed rules (v1.3)</h2>
-<p>1. Universe: BTC, ETH, XAUT, RQQQ, RSPY, RNVDA, RMETA, RTSLA &mdash; real daily closes from a public exchange API (no account, no keys).</p>
+<h2 class="sec">The fixed rules (v1.4)</h2>
+<p>1. Universe: BTC, ETH, XAUT, RQQQ, RSPY, RNVDA, US30, DE40, JP225, HK50, EURUSD, USDJPY, XAGUSD &mdash; real daily closes from public exchange APIs (no account, no keys): spot candles for the tokenized assets, CFD quote history for the indices, forex and silver.</p>
 <p>2. One evaluation per closed day, in the morning issue (~07:00 Riga). No intraday moves, no discretionary calls.</p>
 <p>3. BUY 10% of remaining cash when the 7-day return is above +1% and the close is above its 30-day average; never more than 50% of equity in one asset; skip if less than 10 USDT free.</p>
 <p>4. SELL half a position when its 7-day return drops below &minus;5%. Otherwise hold. Fee 0.1% on every fill. <b>Rules v1.1:</b> a position worth under 1 USDT is closed in full instead of being halved forever &mdash; real exchanges reject sub-minimum orders.</p>
-<p class="note"><b>Rules v1.3 (2026-11-04):</b> the RWA sleeve was re-picked by <b>measured liquidity</b> &mdash; average daily USDT turnover over the last 30 closed days (not the 24h snapshot: one-day spikes lie). Index tokens RQQQ (22.8B) and RSPY (21.2B) stay; single-stock tokens RNVDA (16.1B), RMETA (11.4B) and RTSLA (10.6B) join; XAUT stays as the gold proxy (turnover 20x PAXG &mdash; duplicate gold exposure dropped); the 3x leveraged RTQQQ (3.2B) and near-zero-volatility EUR/USD (0.9M) left the universe as the weakest slots. Selection criterion is liquidity, not a market view. Identical rules for all eight; 200+ closed daily candles each.</p>
+<p class="note"><b>Rules v1.3 (2026-11-04):</b> the RWA sleeve re-picked by <b>measured liquidity</b> &mdash; average daily USDT turnover over the last 30 closed days. RQQQ (22.8B) and RSPY (21.2B) stayed on top; RTQQQ (3.2B, 3x leveraged) and USDTEUR (0.9M, near-zero volatility) left as the weakest slots.</p>
+<p class="note"><b>Rules v1.4 (2026-11-04):</b> Bitget&rsquo;s index and forex CFD books are publicly readable (API without an account), so seven CFD instruments join: US30 (spread 0.32 bps), DE40 1.08, JP225 2.05, HK50 6.64, EURUSD 0.09 &mdash; the tightest instrument on the platform, USDJPY 0.19, and silver XAGUSD 7.12. CFDs publish no volume, so their liquidity was ranked by <b>bid-ask spread</b> instead of turnover. Duplicates excluded by construction: NAS100&thinsp;&asymp;&thinsp;RQQQ, US500&thinsp;&asymp;&thinsp;RSPY, XAUUSD&thinsp;&asymp;&thinsp;XAUT &mdash; one exposure per slot. RMETA and RTSLA made room for the new asset classes; crypto is now 2 of 13. CFD instruments are decided only on days with a fresh daily candle (they trade 24/5); 89 closed daily candles each.</p>
 <p class="note">The same candles in &rarr; the same trades out: the engine is deterministic. The full ledger lives in <code>paper/state.json</code> in this site&rsquo;s repository &mdash; every change is a commit, so the git history is the audit trail.</p>
 
 <h2 class="sec">Open positions</h2>
@@ -83,12 +84,12 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 
 <h2 class="sec">Self-review</h2>
 <p>Every daily run replays the whole ledger, recomputes the equity from real prices, re-checks the rules, data freshness and page integrity &mdash; and repairs what it can automatically. Findings and fixes land as commits, so the review itself is auditable.</p>
-<p><b>Last review</b> 2026-11-04 11:42 UTC: LEDGER PASS &middot; EQUITY PASS &middot; RULES PASS &middot; FRESH PASS &middot; PAGE PASS &middot; SITEMAP PASS</p>
+<p><b>Last review</b> 2026-11-04 12:00 UTC: LEDGER PASS &middot; EQUITY PASS &middot; RULES PASS &middot; FRESH PASS &middot; PAGE PASS &middot; SITEMAP PASS</p>
 <p><b>Same-window yardstick (n/a):</b> desk <b>n/a</b> vs hold BTC n/a / hold ETH n/a &middot; max drawdown n/a &middot; avg exposure n/a of equity &middot; SELL win rate n/a &middot; fees paid n/a</p>
 
 
 <h2 class="sec">Honest limits</h2>
-<p>Daily-close fills only: no intraday prices, no slippage, no partial-fill quirks, funding rates not modelled. A position under 1 USDT would not even be accepted by a real exchange &mdash; rules v1.1 closes it in full. Real trading would differ. That is exactly why this desk is labelled paper everywhere.</p>
+<p>Daily-close fills only: no intraday prices, no slippage, no partial-fill quirks, funding rates not modelled. A position under 1 USDT would not even be accepted by a real exchange &mdash; rules v1.1 closes it in full. CFD positions are priced from the buy-side daily quote; the real spread and overnight financing are not modelled, and the flat 0.1% paper fee overstates a real CFD&rsquo;s cost &mdash; deliberately conservative. No leverage anywhere: every CFD position is a 1x long, like a spot position. Real trading would differ. That is exactly why this desk is labelled paper everywhere.</p>
 <p><a href="https://www.sok.lv/">&larr; sok.lv</a></p>
 <footer>&copy; 2026 sok.lv &middot; <a href="https://www.sok.lv/">home</a> &middot; <a href="/horoscope/">sky</a> &middot; <a href="/markets/">markets</a> &middot; <a href="/archive/">archive</a></footer>
 </main>
