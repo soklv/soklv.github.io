@@ -172,124 +172,149 @@
  "equity_history": [
   {
    "date": "2026-10-05",
-   "equity": 903.06
+   "equity": 993.11
   },
   {
    "date": "2026-10-06",
-   "equity": 898.55
+   "equity": 988.08
   },
   {
    "date": "2026-10-07",
-   "equity": 893.84
+   "equity": 982.71
   },
   {
    "date": "2026-10-08",
-   "equity": 894.77
+   "equity": 986.8
   },
   {
    "date": "2026-10-09",
-   "equity": 894.98
+   "equity": 987.19
   },
   {
    "date": "2026-10-10",
-   "equity": 895.1
+   "equity": 989.08
   },
   {
    "date": "2026-10-11",
-   "equity": 895.08
+   "equity": 986.46
   },
   {
    "date": "2026-10-12",
-   "equity": 895.05
+   "equity": 988.03
   },
   {
    "date": "2026-10-13",
-   "equity": 894.9
+   "equity": 984.06
   },
   {
    "date": "2026-10-14",
-   "equity": 894.92
+   "equity": 985.76
   },
   {
    "date": "2026-10-15",
-   "equity": 894.9
+   "equity": 983.41
   },
   {
    "date": "2026-10-16",
-   "equity": 894.88
+   "equity": 983.4
   },
   {
    "date": "2026-10-17",
-   "equity": 894.83
+   "equity": 983.02
   },
   {
    "date": "2026-10-18",
-   "equity": 894.85
+   "equity": 984.71
   },
   {
    "date": "2026-10-19",
-   "equity": 894.91
+   "equity": 986.21
   },
   {
    "date": "2026-10-20",
-   "equity": 808.45
+   "equity": 990.49
   },
   {
    "date": "2026-10-21",
-   "equity": 808.19
+   "equity": 984.14
   },
   {
    "date": "2026-10-22",
-   "equity": 808.21
+   "equity": 984.15
   },
   {
    "date": "2026-10-23",
-   "equity": 807.98
+   "equity": 979.97
   },
   {
    "date": "2026-10-24",
-   "equity": 808.07
+   "equity": 981.81
   },
   {
    "date": "2026-10-25",
-   "equity": 808.03
+   "equity": 981.35
   },
   {
    "date": "2026-10-26",
-   "equity": 808.07
+   "equity": 981.65
   },
   {
    "date": "2026-10-27",
-   "equity": 808.04
+   "equity": 981.64
   },
   {
    "date": "2026-10-28",
-   "equity": 808.12
+   "equity": 984.33
   },
   {
    "date": "2026-10-29",
-   "equity": 807.8
+   "equity": 975.11
   },
   {
    "date": "2026-10-30",
-   "equity": 807.85
+   "equity": 975.06
   },
   {
    "date": "2026-10-31",
-   "equity": 807.89
+   "equity": 975.9
   },
   {
    "date": "2026-11-01",
-   "equity": 807.9
+   "equity": 974.87
   },
   {
    "date": "2026-11-02",
-   "equity": 807.96
+   "equity": 975.28
   },
   {
    "date": "2026-11-03",
-   "equity": 808.01
+   "equity": 977.25
   }
  ],
- "last_processed": "2026-11-03"
+ "last_processed": "2026-11-03",
+ "review": {
+  "checked_utc": "2026-11-04 10:26 UTC",
+  "checks": {
+   "ledger": "PASS",
+   "equity": "FIXED (max drift 182.04 USDT)",
+   "rules": "PASS",
+   "fresh": "PASS",
+   "page": "PASS",
+   "sitemap": "PASS"
+  },
+  "repairs": [
+   "equity_history recomputed from real closes"
+  ],
+  "analytics": {
+   "pnl_pct": -2.28,
+   "hold_btc_pct": -8.42,
+   "hold_eth_pct": -13.81,
+   "max_drawdown_pct": -2.51,
+   "sell_win_rate": 0.0,
+   "fees_usdt": 0.36,
+   "avg_exposure_pct": 15.0,
+   "window": "2026-10-05..2026-11-03"
+  },
+  "verdict": "OK"
+ }
 }
