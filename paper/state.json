@@ -1,0 +1,295 @@
+{
+ "version": 1,
+ "start_cash": 1000.0,
+ "fee_rate": 0.001,
+ "cash": 802.8219607646625,
+ "positions": {
+  "BTCUSDT": {
+   "qty": 0.00221929,
+   "avg_cost": 85247.98
+  },
+  "ETHUSDT": {
+   "qty": 1.625e-05,
+   "avg_cost": 2704.61
+  }
+ },
+ "trades": [
+  {
+   "date": "2026-10-05",
+   "kind": "warm-up",
+   "action": "BUY",
+   "symbol": "BTCUSDT",
+   "qty": 0.00116541,
+   "price": 85721.0,
+   "fee": 0.1,
+   "cash_after": 900.0,
+   "reason": "7d +3.2% > +1% and close > 30d average (81706)"
+  },
+  {
+   "date": "2026-10-05",
+   "kind": "warm-up",
+   "action": "BUY",
+   "symbol": "ETHUSDT",
+   "qty": 0.03327646,
+   "price": 2701.91,
+   "fee": 0.09,
+   "cash_after": 810.0,
+   "reason": "7d +1.0% > +1% and close > 30d average (2607)"
+  },
+  {
+   "date": "2026-10-07",
+   "kind": "warm-up",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 0.01663823,
+   "price": 2435.41,
+   "fee": 0.0405,
+   "cash_after": 850.48,
+   "reason": "7d return -9.2% < -5% -> cut position in half"
+  },
+  {
+   "date": "2026-10-08",
+   "kind": "warm-up",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 0.00831912,
+   "price": 2489.0,
+   "fee": 0.0207,
+   "cash_after": 871.17,
+   "reason": "7d return -7.7% < -5% -> cut position in half"
+  },
+  {
+   "date": "2026-10-09",
+   "kind": "warm-up",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 0.00415955,
+   "price": 2511.92,
+   "fee": 0.0104,
+   "cash_after": 881.6,
+   "reason": "7d return -6.3% < -5% -> cut position in half"
+  },
+  {
+   "date": "2026-10-10",
+   "kind": "warm-up",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 0.00207978,
+   "price": 2535.63,
+   "fee": 0.0053,
+   "cash_after": 886.87,
+   "reason": "7d return -6.0% < -5% -> cut position in half"
+  },
+  {
+   "date": "2026-10-11",
+   "kind": "warm-up",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 0.00103989,
+   "price": 2530.47,
+   "fee": 0.0026,
+   "cash_after": 889.5,
+   "reason": "7d return -6.2% < -5% -> cut position in half"
+  },
+  {
+   "date": "2026-10-12",
+   "kind": "warm-up",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 0.00051994,
+   "price": 2516.47,
+   "fee": 0.0013,
+   "cash_after": 890.81,
+   "reason": "7d return -6.9% < -5% -> cut position in half"
+  },
+  {
+   "date": "2026-10-13",
+   "kind": "warm-up",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 0.00025998,
+   "price": 2429.81,
+   "fee": 0.0006,
+   "cash_after": 891.44,
+   "reason": "7d return -5.5% < -5% -> cut position in half"
+  },
+  {
+   "date": "2026-10-17",
+   "kind": "warm-up",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 0.00012998,
+   "price": 2379.73,
+   "fee": 0.0003,
+   "cash_after": 891.75,
+   "reason": "7d return -6.1% < -5% -> cut position in half"
+  },
+  {
+   "date": "2026-10-18",
+   "kind": "warm-up",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 6.499e-05,
+   "price": 2394.46,
+   "fee": 0.0002,
+   "cash_after": 891.9,
+   "reason": "7d return -5.4% < -5% -> cut position in half"
+  },
+  {
+   "date": "2026-10-20",
+   "kind": "warm-up",
+   "action": "BUY",
+   "symbol": "BTCUSDT",
+   "qty": 0.00105388,
+   "price": 84545.78,
+   "fee": 0.0892,
+   "cash_after": 802.71,
+   "reason": "7d +3.6% > +1% and close > 30d average (83534)"
+  },
+  {
+   "date": "2026-10-27",
+   "kind": "warm-up",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 3.25e-05,
+   "price": 2334.98,
+   "fee": 0.0001,
+   "cash_after": 802.79,
+   "reason": "7d return -7.1% < -5% -> cut position in half"
+  },
+  {
+   "date": "2026-10-29",
+   "kind": "warm-up",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 1.625e-05,
+   "price": 2226.83,
+   "fee": 0.0,
+   "cash_after": 802.82,
+   "reason": "7d return -7.5% < -5% -> cut position in half"
+  }
+ ],
+ "equity_history": [
+  {
+   "date": "2026-10-05",
+   "equity": 903.06
+  },
+  {
+   "date": "2026-10-06",
+   "equity": 898.55
+  },
+  {
+   "date": "2026-10-07",
+   "equity": 893.84
+  },
+  {
+   "date": "2026-10-08",
+   "equity": 894.77
+  },
+  {
+   "date": "2026-10-09",
+   "equity": 894.98
+  },
+  {
+   "date": "2026-10-10",
+   "equity": 895.1
+  },
+  {
+   "date": "2026-10-11",
+   "equity": 895.08
+  },
+  {
+   "date": "2026-10-12",
+   "equity": 895.05
+  },
+  {
+   "date": "2026-10-13",
+   "equity": 894.9
+  },
+  {
+   "date": "2026-10-14",
+   "equity": 894.92
+  },
+  {
+   "date": "2026-10-15",
+   "equity": 894.9
+  },
+  {
+   "date": "2026-10-16",
+   "equity": 894.88
+  },
+  {
+   "date": "2026-10-17",
+   "equity": 894.83
+  },
+  {
+   "date": "2026-10-18",
+   "equity": 894.85
+  },
+  {
+   "date": "2026-10-19",
+   "equity": 894.91
+  },
+  {
+   "date": "2026-10-20",
+   "equity": 808.45
+  },
+  {
+   "date": "2026-10-21",
+   "equity": 808.19
+  },
+  {
+   "date": "2026-10-22",
+   "equity": 808.21
+  },
+  {
+   "date": "2026-10-23",
+   "equity": 807.98
+  },
+  {
+   "date": "2026-10-24",
+   "equity": 808.07
+  },
+  {
+   "date": "2026-10-25",
+   "equity": 808.03
+  },
+  {
+   "date": "2026-10-26",
+   "equity": 808.07
+  },
+  {
+   "date": "2026-10-27",
+   "equity": 808.04
+  },
+  {
+   "date": "2026-10-28",
+   "equity": 808.12
+  },
+  {
+   "date": "2026-10-29",
+   "equity": 807.8
+  },
+  {
+   "date": "2026-10-30",
+   "equity": 807.85
+  },
+  {
+   "date": "2026-10-31",
+   "equity": 807.89
+  },
+  {
+   "date": "2026-11-01",
+   "equity": 807.9
+  },
+  {
+   "date": "2026-11-02",
+   "equity": 807.96
+  },
+  {
+   "date": "2026-11-03",
+   "equity": 808.01
+  }
+ ],
+ "last_processed": "2026-11-03"
+}
