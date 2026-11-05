@@ -53,7 +53,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <div class="warn"><b>Simulation, not real trading.</b> Paper money only. Fills are simulated at the daily close price with a 0.1% fee and no slippage. Nothing here is investment advice &mdash; it is a public experiment in discipline and record-keeping.</div>
 
 <h2 class="sec">Status</h2>
-<p><b>Equity: 1,000.00 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="up">+0.00%</span> &middot; cash 1,000.00 USDT &middot; prices as of 2026-11-03 close, page built 04 Nov 2026 12:09 UTC.</p>
+<p><b>Equity: 999.61 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-0.04%</span> &middot; cash 590.49 USDT &middot; prices as of 2026-11-04 close, page built 05 Nov 2026 05:26 UTC.</p>
 
 <h2 class="sec">The fixed rules (v1.5)</h2>
 <p>1. Universe: BTC, ETH, XAUT, RQQQ, RSPY, RNVDA, US30, DE40, JP225, HK50, EURUSD, USDJPY, XAGUSD, UKOUSD &mdash; real daily closes from public exchange APIs (no account, no keys): spot candles for the tokenized assets, CFD quote history for the indices, forex, silver and oil.</p>
@@ -68,25 +68,25 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <h2 class="sec">Open positions</h2>
 <table>
 <tr><th>Asset</th><th>Qty</th><th>Avg cost</th><th>Last close</th><th>Value</th><th>Weight</th></tr>
-<tr><td colspan="6">No open positions yet — waiting for a signal.</td></tr>
+<tr><td>DE40</td><td>0.00272899</td><td>26,713.18</td><td>26,686.43</td><td>72.83</td><td>7%</td></tr><tr><td>ETH / USDT</td><td>0.04123839</td><td>2,424.92</td><td>2,422.91</td><td>99.92</td><td>10%</td></tr><tr><td>HK50</td><td>0.00268647</td><td>24,422.38</td><td>24,398.00</td><td>65.54</td><td>7%</td></tr><tr><td>US30</td><td>0.00151315</td><td>53,530.71</td><td>53,477.10</td><td>80.92</td><td>8%</td></tr><tr><td>XAUT / USDT</td><td>0.02188262</td><td>4,112.85</td><td>4,108.70</td><td>89.91</td><td>9%</td></tr>
 </table>
 
 <h2 class="sec">Recent decisions</h2>
 <table>
 <tr><th>Date</th><th>Run</th><th>Action</th><th>Asset</th><th>Qty</th><th>Price</th><th>Why</th></tr>
-<tr><td colspan="7">No trades yet.</td></tr>
+<tr><td>2026-11-04</td><td>live</td><td class="up">BUY</td><td>HK50</td><td>0.00268647</td><td>24,398.00</td><td>7d +5.2% > +1% and close > 30d average (23932)</td></tr><tr><td>2026-11-04</td><td>live</td><td class="up">BUY</td><td>DE40</td><td>0.00272899</td><td>26,686.43</td><td>7d +5.1% > +1% and close > 30d average (25472)</td></tr><tr><td>2026-11-04</td><td>live</td><td class="up">BUY</td><td>US30</td><td>0.00151315</td><td>53,477.10</td><td>7d +1.9% > +1% and close > 30d average (51996)</td></tr><tr><td>2026-11-04</td><td>live</td><td class="up">BUY</td><td>XAUT</td><td>0.02188262</td><td>4,108.74</td><td>7d +2.1% > +1% and close > 30d average (4069)</td></tr><tr><td>2026-11-04</td><td>live</td><td class="up">BUY</td><td>ETH</td><td>0.04123839</td><td>2,422.50</td><td>7d +2.3% > +1% and close > 30d average (2401)</td></tr>
 </table>
 
 <h2 class="sec">Equity log</h2>
 <table>
 <tr><th>Day</th><th>Equity, USDT</th><th>P&amp;L</th></tr>
-<tr><td colspan="3">Coming with the first days.</td></tr>
+<tr><td>2026-11-04</td><td>999.59</td><td>-0.04%</td></tr>
 </table>
 
 <h2 class="sec">Self-review</h2>
 <p>Every daily run replays the whole ledger, recomputes the equity from real prices, re-checks the rules, data freshness and page integrity &mdash; and repairs what it can automatically. Findings and fixes land as commits, so the review itself is auditable.</p>
-<p><b>Last review</b> 2026-11-04 12:09 UTC: LEDGER PASS &middot; EQUITY PASS &middot; RULES PASS &middot; FRESH PASS &middot; PAGE PASS &middot; SITEMAP PASS</p>
-<p><b>Same-window yardstick (n/a):</b> desk <b>n/a</b> vs hold BTC n/a / hold ETH n/a &middot; max drawdown n/a &middot; avg exposure n/a of equity &middot; SELL win rate n/a &middot; fees paid n/a</p>
+<p><b>Last review</b> 2026-11-05 05:26 UTC: LEDGER PASS &middot; EQUITY PASS &middot; RULES PASS &middot; FRESH PASS &middot; PAGE PASS &middot; SITEMAP PASS</p>
+<p><b>Same-window yardstick (2026-11-04..2026-11-04):</b> desk <b>-0.04%</b> vs hold BTC -0.1% / hold ETH -0.1% &middot; max drawdown -0.04% &middot; avg exposure 41.0% of equity &middot; SELL win rate n/a &middot; fees paid 0.41 USDT</p>
 
 
 <h2 class="sec">Honest limits</h2>

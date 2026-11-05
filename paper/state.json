@@ -6,13 +6,95 @@
  "warmup_archive": "paper/archive/warmup-2026-11-04.json",
  "start_cash": 1000.0,
  "fee_rate": 0.001,
- "cash": 1000.0,
- "positions": {},
- "trades": [],
- "equity_history": [],
- "last_processed": "2026-11-03",
+ "cash": 590.49,
+ "positions": {
+  "ETHUSDT": {
+   "qty": 0.04123839,
+   "avg_cost": 2424.92
+  },
+  "XAUTUSDT": {
+   "qty": 0.02188262,
+   "avg_cost": 4112.85
+  },
+  "US30": {
+   "qty": 0.00151315,
+   "avg_cost": 53530.71
+  },
+  "DE40": {
+   "qty": 0.00272899,
+   "avg_cost": 26713.18
+  },
+  "HK50": {
+   "qty": 0.00268647,
+   "avg_cost": 24422.38
+  }
+ },
+ "trades": [
+  {
+   "date": "2026-11-04",
+   "kind": "live",
+   "action": "BUY",
+   "symbol": "ETHUSDT",
+   "qty": 0.04123839,
+   "price": 2422.5,
+   "fee": 0.1,
+   "cash_after": 900.0,
+   "reason": "7d +2.3% > +1% and close > 30d average (2401)"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "live",
+   "action": "BUY",
+   "symbol": "XAUTUSDT",
+   "qty": 0.02188262,
+   "price": 4108.74,
+   "fee": 0.09,
+   "cash_after": 810.0,
+   "reason": "7d +2.1% > +1% and close > 30d average (4069)"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "live",
+   "action": "BUY",
+   "symbol": "US30",
+   "qty": 0.00151315,
+   "price": 53477.1,
+   "fee": 0.081,
+   "cash_after": 729.0,
+   "reason": "7d +1.9% > +1% and close > 30d average (51996)"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "live",
+   "action": "BUY",
+   "symbol": "DE40",
+   "qty": 0.00272899,
+   "price": 26686.43,
+   "fee": 0.0729,
+   "cash_after": 656.1,
+   "reason": "7d +5.1% > +1% and close > 30d average (25472)"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "live",
+   "action": "BUY",
+   "symbol": "HK50",
+   "qty": 0.00268647,
+   "price": 24398.0,
+   "fee": 0.0656,
+   "cash_after": 590.49,
+   "reason": "7d +5.2% > +1% and close > 30d average (23932)"
+  }
+ ],
+ "equity_history": [
+  {
+   "date": "2026-11-04",
+   "equity": 999.59
+  }
+ ],
+ "last_processed": "2026-11-04",
  "review": {
-  "checked_utc": "2026-11-04 12:09 UTC",
+  "checked_utc": "2026-11-05 05:26 UTC",
   "checks": {
    "ledger": "PASS",
    "equity": "PASS",
@@ -22,7 +104,16 @@
    "sitemap": "PASS"
   },
   "repairs": [],
-  "analytics": {},
+  "analytics": {
+   "pnl_pct": -0.04,
+   "hold_btc_pct": -0.1,
+   "hold_eth_pct": -0.1,
+   "max_drawdown_pct": -0.04,
+   "sell_win_rate": null,
+   "fees_usdt": 0.41,
+   "avg_exposure_pct": 41.0,
+   "window": "2026-11-04..2026-11-04"
+  },
   "verdict": "OK"
  }
 }
