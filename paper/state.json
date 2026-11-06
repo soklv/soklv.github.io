@@ -6,7 +6,7 @@
  "warmup_archive": "paper/archive/warmup-2026-11-04.json",
  "start_cash": 1000.0,
  "fee_rate": 0.001,
- "cash": 590.49,
+ "cash": 478.3,
  "positions": {
   "ETHUSDT": {
    "qty": 0.04123839,
@@ -21,12 +21,12 @@
    "avg_cost": 53530.71
   },
   "DE40": {
-   "qty": 0.00272899,
-   "avg_cost": 26713.18
+   "qty": 0.00498729,
+   "avg_cost": 26457.25
   },
   "HK50": {
-   "qty": 0.00268647,
-   "avg_cost": 24422.38
+   "qty": 0.00485425,
+   "avg_cost": 24463.1
   }
  },
  "trades": [
@@ -84,35 +84,63 @@
    "fee": 0.0656,
    "cash_after": 590.49,
    "reason": "7d +5.2% > +1% and close > 30d average (23932)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "live",
+   "action": "BUY",
+   "symbol": "DE40",
+   "qty": 0.0022583,
+   "price": 26121.81,
+   "fee": 0.059,
+   "cash_after": 531.44,
+   "reason": "7d +1.9% > +1% and close > 30d average (25496)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "live",
+   "action": "BUY",
+   "symbol": "HK50",
+   "qty": 0.00216778,
+   "price": 24489.0,
+   "fee": 0.0531,
+   "cash_after": 478.3,
+   "reason": "7d +6.2% > +1% and close > 30d average (23912)"
   }
  ],
  "equity_history": [
   {
    "date": "2026-11-04",
-   "equity": 999.59
+   "equity": 992.62
+  },
+  {
+   "date": "2026-11-05",
+   "equity": 985.33
   }
  ],
- "last_processed": "2026-11-04",
+ "last_processed": "2026-11-05",
  "review": {
-  "checked_utc": "2026-11-05 05:26 UTC",
+  "checked_utc": "2026-11-06 05:11 UTC",
   "checks": {
    "ledger": "PASS",
-   "equity": "PASS",
+   "equity": "FIXED (max drift 6.97 USDT)",
    "rules": "PASS",
    "fresh": "PASS",
    "page": "PASS",
    "sitemap": "PASS"
   },
-  "repairs": [],
+  "repairs": [
+   "equity_history recomputed from real closes"
+  ],
   "analytics": {
-   "pnl_pct": -0.04,
-   "hold_btc_pct": -0.1,
-   "hold_eth_pct": -0.1,
-   "max_drawdown_pct": -0.04,
+   "pnl_pct": -1.47,
+   "hold_btc_pct": -0.62,
+   "hold_eth_pct": -1.2,
+   "max_drawdown_pct": -1.47,
    "sell_win_rate": null,
-   "fees_usdt": 0.41,
-   "avg_exposure_pct": 41.0,
-   "window": "2026-11-04..2026-11-04"
+   "fees_usdt": 0.52,
+   "avg_exposure_pct": 46.0,
+   "window": "2026-11-04..2026-11-05"
   },
   "verdict": "OK"
  }
