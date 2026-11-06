@@ -53,13 +53,13 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <div class="warn"><b>Simulation, not real trading.</b> Paper money only. Fills are simulated at the daily close price with a 0.1% fee and no slippage. Nothing here is investment advice &mdash; it is a public experiment in discipline and record-keeping.</div>
 
 <h2 class="sec">Status</h2>
-<p><b>Equity: 985.33 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-1.47%</span> &middot; cash 478.30 USDT &middot; prices as of 2026-11-05 close, page built 06 Nov 2026 05:11 UTC.</p>
+<p><b>Equity: 984.85 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-1.52%</span> &middot; cash 478.30 USDT &middot; prices as of 2026-11-05 close, page built 06 Nov 2026 05:24 UTC.</p>
 
-<h2 class="sec">The fixed rules (v1.5)</h2>
+<h2 class="sec">The fixed rules (v1.6)</h2>
 <p>1. Universe: BTC, ETH, XAUT, RQQQ, RSPY, RNVDA, US30, DE40, JP225, HK50, EURUSD, USDJPY, XAGUSD, UKOUSD &mdash; real daily closes from public exchange APIs (no account, no keys): spot candles for the tokenized assets, CFD quote history for the indices, forex, silver and oil.</p>
 <p>2. One evaluation per closed day, in the morning issue (~07:00 Riga). No intraday moves, no discretionary calls.</p>
 <p>3. BUY 10% of remaining cash when the 7-day return is above +1% and the close is above its 30-day average; never more than 50% of equity in one asset; skip if less than 10 USDT free.</p>
-<p>4. SELL half a position when its 7-day return drops below &minus;5%. Otherwise hold. Fee 0.1% on every fill. <b>Rules v1.1:</b> a position worth under 1 USDT is closed in full instead of being halved forever &mdash; real exchanges reject sub-minimum orders.</p>
+<p>4. SELL half a position when its 7-day return drops below &minus;8% (rules v1.6, 2026-11-06: cut trigger deepened from &minus;5% by the full-history tuning grid &mdash; +4.1% final equity and 6.2% vs 7.6% max drawdown, dominating every control window). Otherwise hold. Fee 0.1% on every fill. <b>Rules v1.1:</b> a position worth under 1 USDT is closed in full instead of being halved forever &mdash; real exchanges reject sub-minimum orders.</p>
 <p class="note"><b>Rules v1.3 (2026-11-04):</b> the RWA sleeve re-picked by <b>measured liquidity</b> &mdash; average daily USDT turnover over the last 30 closed days. RQQQ (22.8B) and RSPY (21.2B) stayed on top; RTQQQ (3.2B, 3x leveraged) and USDTEUR (0.9M, near-zero volatility) left as the weakest slots.</p>
 <p class="note"><b>Rules v1.4 (2026-11-04):</b> Bitget&rsquo;s index and forex CFD books are publicly readable (API without an account), so seven CFD instruments join: US30 (spread 0.32 bps), DE40 1.08, JP225 2.05, HK50 6.64, EURUSD 0.09 &mdash; the tightest instrument on the platform, USDJPY 0.19, and silver XAGUSD 7.12. CFDs publish no volume, so their liquidity was ranked by <b>bid-ask spread</b> instead of turnover. Duplicates excluded by construction: NAS100&thinsp;&asymp;&thinsp;RQQQ, US500&thinsp;&asymp;&thinsp;RSPY, XAUUSD&thinsp;&asymp;&thinsp;XAUT &mdash; one exposure per slot. RMETA and RTSLA made room for the new asset classes; crypto is now 2 of 13. CFD instruments are decided only on days with a fresh daily candle (they trade 24/5); 89 closed daily candles each.</p>
 <p class="note"><b>Rules v1.5 (2026-11-04):</b> a deep scan of every CFD quote surfaced oil &mdash; my earlier &ldquo;no WTI/Brent in the API&rdquo; was a filter miss, and the correction is on record. The energy class joins by the same measured-spread rule: <b>UKOUSD (Brent), spread 2.26 bps</b> (WTI USOUSD 3.13 was the runner-up; both 89 closed days). 14 instruments now; crypto 2 of 14.</p>
@@ -68,7 +68,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <h2 class="sec">Open positions</h2>
 <table>
 <tr><th>Asset</th><th>Qty</th><th>Avg cost</th><th>Last close</th><th>Value</th><th>Weight</th></tr>
-<tr><td>DE40</td><td>0.00498729</td><td>26,457.25</td><td>26,121.81</td><td>130.28</td><td>13%</td></tr><tr><td>ETH / USDT</td><td>0.04123839</td><td>2,424.92</td><td>2,227.62</td><td>91.86</td><td>9%</td></tr><tr><td>HK50</td><td>0.00485425</td><td>24,463.10</td><td>24,489.00</td><td>118.88</td><td>12%</td></tr><tr><td>US30</td><td>0.00151315</td><td>53,530.71</td><td>51,279.10</td><td>77.59</td><td>8%</td></tr><tr><td>XAUT / USDT</td><td>0.02188262</td><td>4,112.85</td><td>4,040.61</td><td>88.42</td><td>9%</td></tr>
+<tr><td>DE40</td><td>0.00498729</td><td>26,457.25</td><td>26,121.81</td><td>130.28</td><td>13%</td></tr><tr><td>ETH / USDT</td><td>0.04123839</td><td>2,424.92</td><td>2,221.93</td><td>91.63</td><td>9%</td></tr><tr><td>HK50</td><td>0.00485425</td><td>24,463.10</td><td>24,489.00</td><td>118.88</td><td>12%</td></tr><tr><td>US30</td><td>0.00151315</td><td>53,530.71</td><td>51,279.10</td><td>77.59</td><td>8%</td></tr><tr><td>XAUT / USDT</td><td>0.02188262</td><td>4,112.85</td><td>4,029.33</td><td>88.17</td><td>9%</td></tr>
 </table>
 
 <h2 class="sec">Recent decisions</h2>
