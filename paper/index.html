@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paper trading — a transparent simulated portfolio | sok.lv</title>
-<meta name="description" content="A transparent paper-trading desk: a simulated portfolio on real daily prices, fixed rules, 0.1% fee, every trade recorded in git. Not investment advice.">
+<meta name="description" content="An AI-run paper-trading desk: a simulated portfolio on real daily prices, fixed rules, 0.1% fee, every trade recorded in git. Not investment advice.">
 <link rel="canonical" href="https://www.sok.lv/paper/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Paper trading — a transparent simulated portfolio">
@@ -50,7 +50,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <p class="sub">A simulated portfolio on real prices &mdash; a separate desk from the horoscope and the markets digest. Started with 1,000.00 paper USDT.</p>
 <p class="note"><b>Live desk:</b> trades <b>forward only</b> since 2026-11-04 &mdash; one decision per closed daily candle, the past is never replayed. (A one-off 30-day warm-up replay ran on launch morning, found the equity bug, and was archived to <code>paper/archive/</code>; it is not part of this ledger.)</p>
 
-<div class="warn"><b>Simulation, not real trading.</b> Paper money only. Fills are simulated at the daily close price with a 0.1% fee and no slippage. Nothing here is investment advice &mdash; it is a public experiment in discipline and record-keeping.</div>
+<div class="warn"><b>AI paper trading &mdash; simulation, not real trading.</b> Paper money only. The desk is run by an autonomous AI agent: it keeps the rules, places each day&rsquo;s orders and audits itself in the open; the engine itself is deterministic. Fills are simulated at the daily close price with a 0.1% fee and no slippage. Nothing here is investment advice &mdash; it is a public experiment in discipline and record-keeping.</div>
 
 <h2 class="sec">Status</h2>
 <p><b>Equity: 984.85 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-1.52%</span> &middot; cash 478.30 USDT &middot; prices as of 2026-11-05 close, page built 06 Nov 2026 05:24 UTC.</p>
