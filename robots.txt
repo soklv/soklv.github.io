@@ -17,3 +17,4 @@ User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://www.sok.lv/sitemap.xml
+Sitemap: https://www.sok.lv/news-sitemap.xml
