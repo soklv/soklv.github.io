@@ -34,6 +34,14 @@ h1{font-size:2.2rem;line-height:1.2;margin:0 0 .5rem}
 .card a:hover{text-decoration:underline}
 .note{color:var(--mut);font-size:.95rem;margin:1.75rem 0 0}
 footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
+/* Masthead (2026-11-08, kraser: «заголовок покрасивей») — newspaper head,
+   works in both themes via vars; #mast-date filled by JS, graceful fallback */
+.mast{text-align:center;margin:0 0 1.9rem}
+.mast-meta{color:var(--mut);font-size:.72rem;text-transform:uppercase;letter-spacing:.22em;margin:0 0 1.15rem}
+.mast h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.5rem,9vw,3.4rem);line-height:1;letter-spacing:.04em;margin:0 0 .5rem}
+.mast h1 .tld{color:var(--acc)}
+.mast-tag{color:var(--mut);font-size:.8rem;text-transform:uppercase;letter-spacing:.18em;margin:0 0 1.3rem}
+.mast-rule{width:18rem;max-width:70%;height:3px;margin:0 auto;border-top:3px solid var(--fg);border-bottom:1px solid var(--bdr)}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJ0Y7GCCC3"></script>
@@ -46,7 +54,12 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 </head>
 <body>
 <main>
-<h1>sok.lv</h1>
+<header class="mast">
+<p class="mast-meta"><span id="mast-date">Today&rsquo;s edition</span> &middot; Riga, Latvia</p>
+<h1>sok<span class="tld">.lv</span></h1>
+<p class="mast-tag">Learning, simply &mdash; sky &amp; markets, daily</p>
+<div class="mast-rule" aria-hidden="true"></div>
+</header>
 <p class="sub">A small corner of the internet where learning stays simple. Two sites live here &mdash; both free, both made to be read in plain English &mdash; and a daily desk writes two short data pages: today&rsquo;s real sky &mdash; horoscope included &mdash; and today&rsquo;s markets.</p>
 
 <section aria-label="Projects">
@@ -97,5 +110,6 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 
 <footer>&copy; 2026 sok.lv</footer>
 </main>
+<script>try{document.getElementById('mast-date').textContent=new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}catch(e){}</script>
 </body>
 </html>
