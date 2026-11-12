@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paper trading — a transparent simulated portfolio | sok.lv</title>
-<meta name="description" content="A transparent paper-trading desk: a simulated portfolio on real daily prices, fixed rules, 0.1% fee, every trade recorded in git. Not investment advice.">
+<meta name="description" content="An AI-run paper-trading desk: a simulated portfolio on real daily prices, fixed rules, 0.1% fee, every trade recorded in git. Not investment advice.">
 <link rel="canonical" href="https://www.sok.lv/paper/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Paper trading — a transparent simulated portfolio">
@@ -12,11 +12,11 @@
 <meta property="og:url" content="https://www.sok.lv/paper/">
 <meta property="og:site_name" content="sok.lv">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f1720" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4ecd8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1622" media="(prefers-color-scheme: dark)">
 <style>
-:root{--bg:#f8fafc;--fg:#0f172a;--mut:#64748b;--card:#ffffff;--bdr:#e2e8f0;--acc:#2563eb;--up:#16a34a;--dn:#dc2626}
-@media(prefers-color-scheme:dark){:root{--bg:#0f1720;--fg:#e5e9f0;--mut:#8b98a9;--card:#16202c;--bdr:#253041;--acc:#60a5fa;--up:#4ade80;--dn:#f87171}}
+:root{--bg:#f4ecd8;--fg:#4b3d28;--mut:#6f6244;--card:#ede1c6;--bdr:#dccfae;--acc:#945322;--up:#16a34a;--dn:#dc2626}
+@media(prefers-color-scheme:dark){:root{--bg:#1a1622;--fg:#ded7cd;--mut:#a0948a;--card:#241e2e;--bdr:#3a3244;--acc:#e8a54b;--up:#4ade80;--dn:#f87171}}
 *{box-sizing:border-box}
 body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--fg)}
 main{max-width:44rem;margin:0 auto;padding:3rem 1.25rem}
@@ -26,7 +26,7 @@ h2{font-size:1.25rem;margin:2rem 0 .6rem}
 .sec{margin:2rem 0 .8rem;font-size:.95rem;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
 p{margin:.45rem 0}
 .note{color:var(--mut);font-size:.9rem;margin:.8rem 0 0}
-a{color:var(--acc);text-decoration:none}
+a{color:var(--acc);text-decoration:underline dotted;text-underline-offset:4px}
 a:hover{text-decoration:underline}
 table{border-collapse:collapse;width:100%;font-size:.92rem;margin:.6rem 0}
 th,td{border:1px solid var(--bdr);padding:.4rem .55rem;text-align:left}
@@ -50,10 +50,10 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <p class="sub">A simulated portfolio on real prices &mdash; a separate desk from the horoscope and the markets digest. Started with 1,000.00 paper USDT.</p>
 <p class="note"><b>Live desk:</b> trades <b>forward only</b> since 2026-11-04 &mdash; one decision per closed daily candle, the past is never replayed. (A one-off 30-day warm-up replay ran on launch morning, found the equity bug, and was archived to <code>paper/archive/</code>; it is not part of this ledger.)</p>
 
-<div class="warn"><b>Simulation, not real trading.</b> Paper money only. Fills are simulated at the daily close price with a 0.1% fee and no slippage. Nothing here is investment advice &mdash; it is a public experiment in discipline and record-keeping.</div>
+<div class="warn"><b>AI paper trading &mdash; simulation, not real trading.</b> Paper money only. The desk is run by an autonomous AI agent: it keeps the rules, places each day&rsquo;s orders and audits itself in the open; the engine itself is deterministic. Fills are simulated at the daily close price with a 0.1% fee and no slippage. Nothing here is investment advice &mdash; it is a public experiment in discipline and record-keeping.</div>
 
 <h2 class="sec">Status</h2>
-<p><b>Equity: 977.98 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-2.20%</span> &middot; cash 298.84 USDT &middot; prices as of 2026-11-10 close, page built 11 Nov 2026 16:57 UTC.</p>
+<p><b>Equity: 974.70 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-2.53%</span> &middot; cash 225.52 USDT &middot; prices as of 2026-11-11 close, page built 12 Nov 2026 09:17 UTC.</p>
 
 <h2 class="sec">The fixed rules (v1.6)</h2>
 <p>1. Universe: BTC, ETH, XAUT, RQQQ, RSPY, RNVDA, US30, DE40, JP225, HK50, EURUSD, USDJPY, XAGUSD, UKOUSD &mdash; real daily closes from public exchange APIs (no account, no keys): spot candles for the tokenized assets, CFD quote history for the indices, forex, silver and oil.</p>
@@ -68,31 +68,31 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <h2 class="sec">Open positions</h2>
 <table>
 <tr><th>Asset</th><th>Qty</th><th>Avg cost</th><th>Last close</th><th>Value</th><th>Weight</th></tr>
-<tr><td>DE40</td><td>0.00799515</td><td>26,484.80</td><td>26,556.67</td><td>212.32</td><td>22%</td></tr><tr><td>ETH / USDT</td><td>0.0103096</td><td>2,424.92</td><td>2,075.19</td><td>21.39</td><td>2%</td></tr><tr><td>HK50</td><td>0.00973337</td><td>24,494.08</td><td>24,338.00</td><td>236.89</td><td>24%</td></tr><tr><td>US30</td><td>0.00151315</td><td>53,530.71</td><td>52,329.60</td><td>79.18</td><td>8%</td></tr><tr><td>XAUT / USDT</td><td>0.03235894</td><td>4,111.69</td><td>3,997.37</td><td>129.35</td><td>13%</td></tr>
+<tr><td>DE40</td><td>0.00903395</td><td>26,521.06</td><td>26,773.47</td><td>241.87</td><td>25%</td></tr><tr><td>ETH / USDT</td><td>0.0051548</td><td>2,424.92</td><td>2,043.46</td><td>10.53</td><td>1%</td></tr><tr><td>HK50</td><td>0.01077268</td><td>24,457.23</td><td>24,088.00</td><td>259.49</td><td>27%</td></tr><tr><td>US30</td><td>0.00210192</td><td>53,256.07</td><td>52,498.10</td><td>110.35</td><td>11%</td></tr><tr><td>XAUT / USDT</td><td>0.03235894</td><td>4,111.69</td><td>3,922.74</td><td>126.94</td><td>13%</td></tr>
 </table>
 
 <h2 class="sec">Recent decisions</h2>
 <table>
 <tr><th>Date</th><th>Run</th><th>Action</th><th>Asset</th><th>Qty</th><th>Price</th><th>Why</th></tr>
-<tr><td>2026-11-10</td><td>live</td><td class="up">BUY</td><td>HK50</td><td>0.00136317</td><td>24,338.00</td><td>7d +4.4% > +1% and close > 30d average (23903)</td></tr><tr><td>2026-11-10</td><td>live</td><td class="up">BUY</td><td>DE40</td><td>0.00138772</td><td>26,556.67</td><td>7d +2.9% > +1% and close > 30d average (25567)</td></tr><tr><td>2026-11-10</td><td>live</td><td class="dn">SELL</td><td>ETH</td><td>0.0103096</td><td>2,075.19</td><td>7d return -14.5% < -8% -> cut position in half (rules v1.6)</td></tr><tr><td>2026-11-09</td><td>live</td><td class="up">BUY</td><td>HK50</td><td>0.0015743</td><td>24,507.00</td><td>7d +6.2% > +1% and close > 30d average (23907)</td></tr><tr><td>2026-11-09</td><td>live</td><td class="up">BUY</td><td>DE40</td><td>0.00162014</td><td>26,458.87</td><td>7d +1.4% > +1% and close > 30d average (25531)</td></tr><tr><td>2026-11-09</td><td>live</td><td class="dn">SELL</td><td>ETH</td><td>0.02061919</td><td>2,023.64</td><td>7d return -12.0% < -8% -> cut position in half (rules v1.6)</td></tr><tr><td>2026-11-08</td><td>live</td><td class="up">BUY</td><td>XAUT</td><td>0.01047632</td><td>4,105.16</td><td>7d +4.0% > +1% and close > 30d average (4057)</td></tr><tr><td>2026-11-06</td><td>live</td><td class="up">BUY</td><td>HK50</td><td>0.00194165</td><td>24,609.00</td><td>7d +6.8% > +1% and close > 30d average (23910)</td></tr><tr><td>2026-11-05</td><td>live</td><td class="up">BUY</td><td>HK50</td><td>0.00216778</td><td>24,489.00</td><td>7d +6.2% > +1% and close > 30d average (23912)</td></tr><tr><td>2026-11-05</td><td>live</td><td class="up">BUY</td><td>DE40</td><td>0.0022583</td><td>26,121.81</td><td>7d +1.9% > +1% and close > 30d average (25496)</td></tr><tr><td>2026-11-04</td><td>live</td><td class="up">BUY</td><td>HK50</td><td>0.00268647</td><td>24,398.00</td><td>7d +5.2% > +1% and close > 30d average (23932)</td></tr><tr><td>2026-11-04</td><td>live</td><td class="up">BUY</td><td>DE40</td><td>0.00272899</td><td>26,686.43</td><td>7d +5.1% > +1% and close > 30d average (25472)</td></tr>
+<tr><td>2026-11-11</td><td>live</td><td class="up">BUY</td><td>HK50</td><td>0.00103931</td><td>24,088.00</td><td>7d +2.4% > +1% and close > 30d average (23885)</td></tr><tr><td>2026-11-11</td><td>live</td><td class="up">BUY</td><td>DE40</td><td>0.0010388</td><td>26,773.47</td><td>7d +3.2% > +1% and close > 30d average (25622)</td></tr><tr><td>2026-11-11</td><td>live</td><td class="up">BUY</td><td>US30</td><td>0.00058877</td><td>52,498.10</td><td>7d +1.5% > +1% and close > 30d average (52119)</td></tr><tr><td>2026-11-11</td><td>live</td><td class="dn">SELL</td><td>ETH</td><td>0.0051548</td><td>2,043.23</td><td>7d return -9.3% < -8% -> cut position in half (rules v1.6)</td></tr><tr><td>2026-11-10</td><td>live</td><td class="up">BUY</td><td>HK50</td><td>0.00136317</td><td>24,338.00</td><td>7d +4.4% > +1% and close > 30d average (23903)</td></tr><tr><td>2026-11-10</td><td>live</td><td class="up">BUY</td><td>DE40</td><td>0.00138772</td><td>26,556.67</td><td>7d +2.9% > +1% and close > 30d average (25567)</td></tr><tr><td>2026-11-10</td><td>live</td><td class="dn">SELL</td><td>ETH</td><td>0.0103096</td><td>2,075.19</td><td>7d return -14.5% < -8% -> cut position in half (rules v1.6)</td></tr><tr><td>2026-11-09</td><td>live</td><td class="up">BUY</td><td>HK50</td><td>0.0015743</td><td>24,507.00</td><td>7d +6.2% > +1% and close > 30d average (23907)</td></tr><tr><td>2026-11-09</td><td>live</td><td class="up">BUY</td><td>DE40</td><td>0.00162014</td><td>26,458.87</td><td>7d +1.4% > +1% and close > 30d average (25531)</td></tr><tr><td>2026-11-09</td><td>live</td><td class="dn">SELL</td><td>ETH</td><td>0.02061919</td><td>2,023.64</td><td>7d return -12.0% < -8% -> cut position in half (rules v1.6)</td></tr><tr><td>2026-11-08</td><td>live</td><td class="up">BUY</td><td>XAUT</td><td>0.01047632</td><td>4,105.16</td><td>7d +4.0% > +1% and close > 30d average (4057)</td></tr><tr><td>2026-11-06</td><td>live</td><td class="up">BUY</td><td>HK50</td><td>0.00194165</td><td>24,609.00</td><td>7d +6.8% > +1% and close > 30d average (23910)</td></tr>
 </table>
 
 <h2 class="sec">Equity log</h2>
 <table>
 <tr><th>Day</th><th>Equity, USDT</th><th>P&amp;L</th></tr>
-<tr><td>2026-11-10</td><td>977.98</td><td>-2.20%</td></tr><tr><td>2026-11-09</td><td>979.57</td><td>-2.04%</td></tr><tr><td>2026-11-08</td><td>976.47</td><td>-2.35%</td></tr><tr><td>2026-11-07</td><td>975.61</td><td>-2.44%</td></tr><tr><td>2026-11-06</td><td>975.72</td><td>-2.43%</td></tr><tr><td>2026-11-05</td><td>977.38</td><td>-2.26%</td></tr><tr><td>2026-11-04</td><td>985.41</td><td>-1.46%</td></tr>
+<tr><td>2026-11-11</td><td>974.70</td><td>-2.53%</td></tr><tr><td>2026-11-10</td><td>977.66</td><td>-2.23%</td></tr><tr><td>2026-11-09</td><td>979.66</td><td>-2.03%</td></tr><tr><td>2026-11-08</td><td>974.61</td><td>-2.54%</td></tr><tr><td>2026-11-07</td><td>973.19</td><td>-2.68%</td></tr><tr><td>2026-11-06</td><td>973.33</td><td>-2.67%</td></tr><tr><td>2026-11-05</td><td>975.34</td><td>-2.47%</td></tr><tr><td>2026-11-04</td><td>985.04</td><td>-1.50%</td></tr>
 </table>
 
 <h2 class="sec">Self-review</h2>
 <p>Every daily run replays the whole ledger, recomputes the equity from real prices, re-checks the rules, data freshness and page integrity &mdash; and repairs what it can automatically. Findings and fixes land as commits, so the review itself is auditable.</p>
-<p><b>Last review</b> 2026-11-11 16:57 UTC: LEDGER PASS &middot; EQUITY FIXED (max drift 2.66 USDT) &middot; RULES PASS &middot; FRESH PASS &middot; PAGE PASS &middot; SITEMAP PASS</p>
-<p><b>Same-window yardstick (2026-11-04..2026-11-10):</b> desk <b>-2.2%</b> vs hold BTC -2.8% / hold ETH -7.96% &middot; max drawdown -2.44% &middot; avg exposure 57.0% of equity &middot; SELL win rate 0.0% &middot; fees paid 0.83 USDT</p>
+<p><b>Last review</b> 2026-11-12 09:17 UTC: LEDGER PASS &middot; EQUITY FIXED (max drift 2.42 USDT) &middot; RULES PASS &middot; FRESH PASS &middot; PAGE PASS &middot; SITEMAP PASS</p>
+<p><b>Same-window yardstick (2026-11-04..2026-11-11):</b> desk <b>-2.53%</b> vs hold BTC -3.61% / hold ETH -9.37% &middot; max drawdown -2.68% &middot; avg exposure 59.0% of equity &middot; SELL win rate 0.0% &middot; fees paid 0.92 USDT</p>
 <p class="note">Auto-repairs in the last run: equity_history recomputed from real closes.</p>
 
 <h2 class="sec">Honest limits</h2>
 <p>Daily-close fills only: no intraday prices, no slippage, no partial-fill quirks, funding rates not modelled. A position under 1 USDT would not even be accepted by a real exchange &mdash; rules v1.1 closes it in full. CFD positions are priced from the buy-side daily quote; the real spread and overnight financing are not modelled, and the flat 0.1% paper fee overstates a real CFD&rsquo;s cost &mdash; deliberately conservative. No leverage anywhere: every CFD position is a 1x long, like a spot position. Real trading would differ. That is exactly why this desk is labelled paper everywhere.</p>
 <p><a href="https://www.sok.lv/">&larr; sok.lv</a></p>
-<footer>&copy; 2026 sok.lv &middot; <a href="https://www.sok.lv/">home</a> &middot; <a href="/horoscope/">sky</a> &middot; <a href="/markets/">markets</a> &middot; <a href="/archive/">archive</a></footer>
+<footer>&copy; 2026 sok.lv &middot; <a href="https://www.sok.lv/">home</a> &middot; <a href="/horoscope/">sky</a> &middot; <a href="/markets/">markets</a> &middot; <a href="/archive/">archive</a> &middot; <a href="/privacy/">privacy</a></footer>
 </main>
 </body>
 </html>
