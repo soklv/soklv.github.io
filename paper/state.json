@@ -6,10 +6,10 @@
  "warmup_archive": "paper/archive/warmup-2026-11-04.json",
  "start_cash": 1000.0,
  "fee_rate": 0.001,
- "cash": 153.26,
+ "cash": 154.42562862807648,
  "positions": {
   "ETHUSDT": {
-   "qty": 0.0012887,
+   "qty": 0.00064435,
    "avg_cost": 2424.92
   },
   "XAUTUSDT": {
@@ -308,56 +308,71 @@
    "fee": 0.017,
    "cash_after": 153.26,
    "reason": "7d +1.4% > +1% and close > 30d average (158)"
+  },
+  {
+   "date": "2026-11-14",
+   "kind": "live",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 0.00064435,
+   "price": 1810.81,
+   "fee": 0.0012,
+   "cash_after": 154.43,
+   "reason": "7d return -19.2% < -8% -> cut position in half (rules v1.6)"
   }
  ],
  "equity_history": [
   {
    "date": "2026-11-04",
-   "equity": 984.46
+   "equity": 984.17
   },
   {
    "date": "2026-11-05",
-   "equity": 973.54
+   "equity": 973.27
   },
   {
    "date": "2026-11-06",
-   "equity": 971.35
+   "equity": 971.08
   },
   {
    "date": "2026-11-07",
-   "equity": 971.2
+   "equity": 970.92
   },
   {
    "date": "2026-11-08",
-   "equity": 973.0
+   "equity": 972.78
   },
   {
    "date": "2026-11-09",
-   "equity": 979.45
+   "equity": 979.31
   },
   {
    "date": "2026-11-10",
-   "equity": 977.22
+   "equity": 977.05
   },
   {
    "date": "2026-11-11",
-   "equity": 972.72
+   "equity": 972.59
   },
   {
    "date": "2026-11-12",
-   "equity": 969.55
+   "equity": 969.47
   },
   {
    "date": "2026-11-13",
-   "equity": 967.97
+   "equity": 966.83
+  },
+  {
+   "date": "2026-11-14",
+   "equity": 966.36
   }
  ],
- "last_processed": "2026-11-13",
+ "last_processed": "2026-11-14",
  "review": {
-  "checked_utc": "2026-11-14 12:01 UTC",
+  "checked_utc": "2026-11-15 20:36 UTC",
   "checks": {
    "ledger": "PASS",
-   "equity": "FIXED (max drift 1.05 USDT)",
+   "equity": "FIXED (max drift 1.14 USDT)",
    "rules": "PASS",
    "fresh": "PASS",
    "page": "PASS",
@@ -367,14 +382,14 @@
    "equity_history recomputed from real closes"
   ],
   "analytics": {
-   "pnl_pct": -3.2,
-   "hold_btc_pct": -11.62,
-   "hold_eth_pct": -15.27,
-   "max_drawdown_pct": -3.2,
+   "pnl_pct": -3.36,
+   "hold_btc_pct": -14.94,
+   "hold_eth_pct": -19.69,
+   "max_drawdown_pct": -3.36,
    "sell_win_rate": 0.0,
    "fees_usdt": 1.01,
-   "avg_exposure_pct": 64.0,
-   "window": "2026-11-04..2026-11-13"
+   "avg_exposure_pct": 66.0,
+   "window": "2026-11-04..2026-11-14"
   },
   "verdict": "OK"
  }
