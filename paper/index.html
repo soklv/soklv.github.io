@@ -49,7 +49,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 </head>
 <body>
 <main>
-<nav class="nav" aria-label="Site"><a href="https://www.sok.lv">sok.lv</a> &middot; <a href="https://www.sok.lv/horoscope/">sky today</a> &middot; <a href="https://www.sok.lv/markets/">markets</a> &middot; <a href="https://www.sok.lv/paper/">paper desk</a> &middot; <a href="https://www.sok.lv/archive/">archive</a> &middot; <a href="https://www.sok.lv/about/">about</a> &middot; <a href="https://www.sok.lv/privacy/">privacy</a></nav>
+<nav class="nav" aria-label="Site"><a href="https://be850.sok.lv/">the book</a> &middot; <a href="https://eli5.sok.lv/">eli5 explainers</a> &middot; <a href="https://www.sok.lv/horoscope/">daily sky</a> &middot; <a href="https://www.sok.lv/markets/">markets</a> &middot; <a href="https://www.sok.lv/about/">about</a> &middot; <a href="https://www.sok.lv/privacy/">privacy</a></nav>
 <h1>Paper trading</h1>
 <p class="sub">A simulated portfolio on real prices &mdash; a separate desk from the horoscope and the markets digest. Started with 1,000.00 paper USDT.</p>
 <p class="note"><b>Live desk:</b> trades <b>forward only</b> since 2026-11-04 &mdash; one decision per closed daily candle, the past is never replayed. (A one-off 30-day warm-up replay ran on launch morning, found the equity bug, and was archived to <code>paper/archive/</code>; it is not part of this ledger.)</p>
@@ -96,7 +96,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <h2 class="sec">Honest limits</h2>
 <p>Daily-close fills only: no intraday prices, no slippage, no partial-fill quirks, funding rates not modelled. A position under 1 USDT would not even be accepted by a real exchange &mdash; rules v1.1 closes it in full. CFD positions are priced from the buy-side daily quote; the real spread and overnight financing are not modelled, and the flat 0.1% paper fee overstates a real CFD&rsquo;s cost &mdash; deliberately conservative. No leverage anywhere: every CFD position is a 1x long, like a spot position. Real trading would differ. That is exactly why this desk is labelled paper everywhere.</p>
 <p><a href="https://www.sok.lv/">&larr; sok.lv</a></p>
-<footer>&copy; 2026 sok.lv &middot; <a href="https://www.sok.lv">home</a> &middot; <a href="https://www.sok.lv/horoscope/">sky</a> &middot; <a href="https://www.sok.lv/markets/">markets</a> &middot; <a href="https://www.sok.lv/paper/">paper</a> &middot; <a href="https://www.sok.lv/archive/">archive</a> &middot; <a href="https://www.sok.lv/about/">about</a> &middot; <a href="https://www.sok.lv/privacy/">privacy</a></footer>
+<footer>&copy; 2026 sok.lv &middot; <a href="https://www.sok.lv/">home</a> &middot; <a href="https://be850.sok.lv/">the book</a> &middot; <a href="https://eli5.sok.lv/">eli5</a> &middot; <a href="https://www.sok.lv/horoscope/">sky</a> &middot; <a href="https://www.sok.lv/markets/">markets</a> &middot; <a href="https://www.sok.lv/paper/">paper</a> &middot; <a href="https://www.sok.lv/archive/">archive</a> &middot; <a href="https://www.sok.lv/about/">about</a> &middot; <a href="https://www.sok.lv/privacy/">privacy</a></footer>
 </main>
 </body>
 </html>

@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>sok.lv — free learning sites, daily sky, horoscope &amp; markets</title>
-<meta name="description" content="sok.lv: ELI5 explainers, Book850 (a novel in Basic English), the real daily sky with a 12-sign horoscope, a markets digest and a paper-trading desk.">
+<title>sok.lv &mdash; Book850: the novel that teaches itself English</title>
+<meta name="description" content="A novel written only with the 850 words of Basic English &mdash; one new word per chapter, each with its own video. Plus ELI5 explainers, daily sky and markets.">
 <link rel="canonical" href="https://www.sok.lv/">
-<link rel="alternate" type="application/rss+xml" title="sok.lv — daily sky, horoscope &amp; markets" href="https://www.sok.lv/rss.xml">
+<link rel="alternate" type="application/rss+xml" title="sok.lv &mdash; daily sky, horoscope &amp; markets" href="https://www.sok.lv/rss.xml">
 <meta property="og:type" content="website">
-<meta property="og:title" content="sok.lv">
-<meta property="og:description" content="Two free learning sites — ELI5 explainers and Book850, the novel that teaches itself — plus daily pages: the real sky with a 12-sign horoscope and a markets digest.">
+<meta property="og:title" content="sok.lv &mdash; Book850">
+<meta property="og:description" content="A novel in Basic English &mdash; one new word per chapter, every chapter with its own video. Plus ELI5 explainers, the real daily sky and a markets digest.">
 <meta property="og:url" content="https://www.sok.lv/">
 <meta property="og:site_name" content="sok.lv">
 <meta name="color-scheme" content="light dark">
@@ -23,7 +23,7 @@ body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
 main{max-width:44rem;margin:0 auto;padding:3.5rem 1.25rem}
 h1{font-size:2.2rem;line-height:1.2;margin:0 0 .5rem}
 .sub{color:var(--mut);font-size:1.05rem;margin:0 0 2rem}
-.sec{margin:0 0 1rem;font-size:.95rem;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.sec{margin:2.2rem 0 1rem;font-size:.95rem;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
 .card{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:1.25rem 1.4rem;margin:0 0 1.5rem}
 .card h3{margin:0 0 .4rem;font-size:1.25rem}
 .card h3 a{color:var(--fg);text-decoration:none}
@@ -34,8 +34,15 @@ h1{font-size:2.2rem;line-height:1.2;margin:0 0 .5rem}
 .card a:hover{text-decoration:underline}
 .note{color:var(--mut);font-size:.95rem;margin:1.75rem 0 0}
 footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
-/* Masthead (2026-11-08, kraser: «заголовок покрасивей») — newspaper head,
-   works in both themes via vars; #mast-date filled by JS, graceful fallback */
+.nav{display:flex;flex-wrap:wrap;gap:.15rem 1.1rem;font-size:.9rem;margin:0 0 2rem;color:var(--mut)}
+.nav a{color:var(--acc);text-decoration:none}
+.nav a:hover{text-decoration:underline}
+.hero{border-width:2px}
+.hero-stats{color:var(--mut);font-size:.95rem;margin:.9rem 0 .2rem}
+.cta{margin:1.1rem 0 0}
+.btn{display:inline-block;background:var(--acc);color:#fff;border-radius:999px;padding:.55rem 1.2rem;text-decoration:none;font-weight:600;margin:0 .6rem .6rem 0}
+.btn:hover{filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--acc);border:1px solid var(--acc)}
 .mast{text-align:center;margin:0 0 1.9rem}
 .mast-meta{color:var(--mut);font-size:.72rem;text-transform:uppercase;letter-spacing:.22em;margin:0 0 1.15rem}
 .mast h1{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.5rem,9vw,3.4rem);line-height:1;letter-spacing:.04em;margin:0 0 .5rem}
@@ -57,22 +64,30 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <header class="mast">
 <p class="mast-meta"><span id="mast-date">Today&rsquo;s edition</span> &middot; Riga, Latvia</p>
 <h1>sok<span class="tld">.lv</span></h1>
-<p class="mast-tag">Learning, simply &mdash; sky &amp; markets, daily</p>
+<p class="mast-tag">A novel in Basic English &mdash; learning, simply</p>
 <div class="mast-rule" aria-hidden="true"></div>
 </header>
-<p class="sub">A small corner of the internet where learning stays simple. Two sites live here &mdash; both free, both made to be read in plain English &mdash; and a daily desk writes two short data pages: today&rsquo;s real sky &mdash; horoscope included &mdash; and today&rsquo;s markets.</p>
+<nav class="nav" aria-label="Site"><a href="https://be850.sok.lv/">the book</a> &middot; <a href="https://eli5.sok.lv/">eli5 explainers</a> &middot; <a href="https://www.sok.lv/horoscope/">daily sky</a> &middot; <a href="https://www.sok.lv/markets/">markets</a> &middot; <a href="https://www.sok.lv/about/">about</a> &middot; <a href="https://www.sok.lv/privacy/">privacy</a></nav>
+<p class="sub">This domain is the home of <b>Book850</b> &mdash; a novel that teaches itself English. Two side entrances keep the rest of the house: <a href="https://eli5.sok.lv/">ELI5 explainers</a> for big ideas made small, and a daily desk that writes <a href="https://www.sok.lv/horoscope/">the real sky</a> and <a href="https://www.sok.lv/markets/">the markets</a> every morning, in plain English.</p>
 
-<section aria-label="Projects">
-<h2 class="sec">Projects</h2>
-
-<div class="card">
-<h3><a href="https://eli5.sok.lv/">ELI5</a> <span class="mut">&middot; eli5.sok.lv</span></h3>
-<p>Big ideas explained like you're five &mdash; astronomy, linguistics, AI, crypto, biochemistry and more. Short illustrated stories, each paired with a video on the <a href="https://www.youtube.com/channel/UC7WKNYA4l_NDQjVQEaKJJ3w">KraSer channel</a>.</p>
-</div>
-
-<div class="card">
+<section aria-label="The book">
+<h2 class="sec">The book</h2>
+<div class="card hero">
 <h3><a href="https://be850.sok.lv/">Book850</a> <span class="mut">&middot; be850.sok.lv</span></h3>
-<p>The book begins with one word. 850 chapters, 850 words, one story &mdash; told only with Ogden's Basic English, adding a single new word per chapter. Every chapter comes with its video, so the book teaches itself.</p>
+<p>One story, 850 chapters long. The first chapter is told with three words of Ogden&rsquo;s Basic English; every next chapter adds exactly one new word. By the last chapter you have met the whole working vocabulary of English &mdash; without ever opening a textbook. Every chapter comes with its own video, so the book teaches itself.</p>
+<!--HERO:BEGIN-->
+<p class="hero-stats">Chapter of the day: <a href="https://be850.sok.lv/far/">74 &mdash; Far</a> &middot; word 74 of 850 &middot; <a href="https://be850.sok.lv/words/">the full 850-word list</a></p>
+<!--HERO:END-->
+<p class="cta"><a class="btn" href="https://be850.sok.lv/">Start reading</a><a class="btn ghost" href="https://be850.sok.lv/words/">Browse the 850 words</a></p>
+</div>
+</section>
+
+<section aria-label="More to read">
+<h2 class="sec">More to read</h2>
+
+<div class="card">
+<h3><a href="https://eli5.sok.lv/">ELI5 explainers</a> <span class="mut">&middot; eli5.sok.lv</span></h3>
+<p>Big ideas explained like you&rsquo;re five &mdash; astronomy, linguistics, AI, crypto, biochemistry and more. Short illustrated stories, each paired with a video on the <a href="https://www.youtube.com/channel/UC7WKNYA4l_NDQjVQEaKJJ3w">KraSer channel</a>.</p>
 </div>
 
 <div class="card">
@@ -81,43 +96,38 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 </div>
 </section>
 
-<section aria-label="Daily">
-<h2 class="sec">Daily</h2>
+<section aria-label="Every day">
+<h2 class="sec">Every day</h2>
 
 <div class="card">
-<h3><a href="/horoscope/">The Real Sky — today</a> <span class="mut">&middot; horoscope</span></h3>
+<h3><a href="https://www.sok.lv/horoscope/">The Real Sky &mdash; today</a> <span class="mut">&middot; horoscope</span></h3>
 <p>Where the planets actually are right now: every position computed from ephemeris &mdash; the same math planetariums use. Moon phase and illumination, next full moon, sunrise and sunset for Latvia. Then a short daily reading for each of the 12 signs, computed from those same positions. The sky itself: no predictions &mdash; just the clock.</p>
 </div>
 
 <div class="card">
-<h3><a href="/markets/">Markets digest — today</a> <span class="mut">&middot; finance</span></h3>
+<h3><a href="https://www.sok.lv/markets/">Markets digest &mdash; today</a> <span class="mut">&middot; finance</span></h3>
 <p>Crypto, tokenized gold, tokenized S&amp;P 500 and Nasdaq in one small table: last price and 24h/7d/30d moves &mdash; plus 10Y Treasury, Fed and ECB rates, the FOMC calendar, market headlines and a plain-English What happened / Why / Tomorrow. Every number from a public endpoint, stamped with the exact minute.</p>
 </div>
 
-<p class="note">Every issue is kept: <a href="/archive/">the archive</a> &mdash; one page per day, sky and horoscope plus markets, frozen at the morning run.</p>
+<p class="note">Every issue is kept: <a href="https://www.sok.lv/archive/">the archive</a> &mdash; one page per day, sky and horoscope plus markets, frozen at the morning run.</p>
 </section>
 
-<section aria-label="Paper trading">
-<h2 class="sec">Paper trading</h2>
+<section aria-label="Also here">
+<h2 class="sec">Also here</h2>
 
 <div class="card">
-<h3><a href="/paper/">Paper trading desk</a> <span class="mut">&middot; experiment</span></h3>
+<h3><a href="https://www.sok.lv/paper/">Paper trading desk</a> <span class="mut">&middot; experiment</span></h3>
 <p>A simulated portfolio on real daily prices from a public exchange API: fixed rules, a 0.1% fee, one decision per day &mdash; and every trade committed to the git history of this site. Paper money only, nowhere near investment advice.</p>
 </div>
-</section>
-
-<section aria-label="Behind sok.lv">
-<h2 class="sec">Behind sok.lv</h2>
 
 <div class="card">
-<h3><a href="/about/">How it all is made</a> <span class="mut">&middot; about</span></h3>
+<h3><a href="https://www.sok.lv/about/">How it all is made</a> <span class="mut">&middot; about</span></h3>
 <p>Every number here is computed or taken from a named public source &mdash; sky positions from ephemeris math computed fresh for each day, market prices from public endpoints stamped with the exact minute. The plain-English readings are written daily by an AI from those same numbers, and the pages label what is fact and what is story. Made in Riga, free to read, kept in a public archive you can check against yesterday&rsquo;s page.</p>
 </div>
 </section>
 
 <p class="note">Everything is free to read and watch &mdash; no sign-up, nothing to install. More may take root here later.</p>
-
-<footer>&copy; 2026 sok.lv &middot; <a href="/horoscope/">sky</a> &middot; <a href="/markets/">markets</a> &middot; <a href="/paper/">paper</a> &middot; <a href="/archive/">archive</a> &middot; <a href="/about/">about</a> &middot; <a href="/privacy/">privacy</a></footer>
+<footer>&copy; 2026 sok.lv &middot; <a href="https://www.sok.lv/">home</a> &middot; <a href="https://be850.sok.lv/">the book</a> &middot; <a href="https://eli5.sok.lv/">eli5</a> &middot; <a href="https://www.sok.lv/horoscope/">sky</a> &middot; <a href="https://www.sok.lv/markets/">markets</a> &middot; <a href="https://www.sok.lv/paper/">paper</a> &middot; <a href="https://www.sok.lv/archive/">archive</a> &middot; <a href="https://www.sok.lv/about/">about</a> &middot; <a href="https://www.sok.lv/privacy/">privacy</a></footer>
 </main>
 <script>try{document.getElementById('mast-date').textContent=new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'})}catch(e){}</script>
 </body>
