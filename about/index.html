@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About sok.lv — what this is and how it is made | sok.lv</title>
+<meta name="description" content="What sok.lv is: free learning sites, a daily sky and horoscope desk, a markets digest and a paper-trading experiment — and how every number on the site is made.">
+<link rel="canonical" href="https://www.sok.lv/about/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About sok.lv — what this is and how it is made">
+<meta property="og:description" content="Free learning sites, a daily sky desk and a markets digest — computed, not scraped, kept daily.">
+<meta property="og:url" content="https://www.sok.lv/about/">
+<meta property="og:site_name" content="sok.lv">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f4ecd8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1622" media="(prefers-color-scheme: dark)">
+<style>
+:root{--bg:#f4ecd8;--fg:#4b3d28;--mut:#6f6244;--card:#ede1c6;--bdr:#dccfae;--acc:#945322}
+@media(prefers-color-scheme:dark){:root{--bg:#1a1622;--fg:#ded7cd;--mut:#a0948a;--card:#241e2e;--bdr:#3a3244;--acc:#e8a54b}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+main{max-width:44rem;margin:0 auto;padding:3rem 1.25rem}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .5rem}
+.sub{color:var(--mut);font-size:1.05rem;margin:0 0 1.6rem}
+.nav{display:flex;flex-wrap:wrap;gap:.15rem 1rem;font-size:.9rem;margin:0 0 2.2rem;color:var(--mut)}
+.nav a{color:var(--acc);text-decoration:none}
+.nav a:hover{text-decoration:underline}
+.card{background:var(--card);border:1px solid var(--bdr);border-radius:12px;padding:1.25rem 1.4rem;margin:0 0 1.5rem}
+.card h2{font-size:1.3rem;margin:.2rem 0 .8rem}
+.card p{margin:.5rem 0}
+.note{color:var(--mut);font-size:.9rem;margin:.8rem 0 0}
+a{color:var(--acc)}
+footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TJ0Y7GCCC3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-TJ0Y7GCCC3');
+</script>
+</head>
+<body>
+<main>
+<nav class="nav" aria-label="Site"><a href="https://www.sok.lv/">sok.lv</a> &middot; <a href="https://www.sok.lv/horoscope/">sky today</a> &middot; <a href="https://www.sok.lv/markets/">markets</a> &middot; <a href="https://www.sok.lv/paper/">paper desk</a> &middot; <a href="https://www.sok.lv/archive/">archive</a> &middot; <a href="https://www.sok.lv/about/">about</a> &middot; <a href="https://www.sok.lv/privacy/">privacy</a></nav>
+<h1>About sok.lv</h1>
+<p class="sub">What this site is, what it is for, and how every number on it is made.</p>
+
+<div class="card">
+<h2>What sok.lv is</h2>
+<p>sok.lv is a small, independent site made in Riga, Latvia. It is free to read &mdash; no account, no paywall, nothing to install. Two things live here. First, two learning projects: <a href="https://eli5.sok.lv/">ELI5</a>, short illustrated explanations of big ideas, and <a href="https://be850.sok.lv/">Book850</a>, a novel told in Ogden&rsquo;s Basic English &mdash; 850 chapters, one new word per chapter, each with its own video. Both projects are paired with videos on the <a href="https://www.youtube.com/channel/UC7WKNYA4l_NDQjVQEaKJJ3w">KraSer YouTube channel</a>.</p>
+<p>Second, a small daily desk. Every morning it publishes two pages: <a href="https://www.sok.lv/horoscope/">the real sky</a> &mdash; planet positions, the moon&rsquo;s phase, sunrise and sunset for Latvia, and a reading for each of the twelve signs &mdash; and <a href="https://www.sok.lv/markets/">the markets digest</a>, a one-page summary of crypto, tokenized gold and stocks, central-bank rates and the day&rsquo;s macro calendar. A third desk, the <a href="https://www.sok.lv/paper/">paper-trading experiment</a>, runs a simulated portfolio on real daily prices, with fixed rules and every decision logged. Every issue is kept: each day gets its own page in <a href="https://www.sok.lv/archive/">the archive</a>.</p>
+</div>
+
+<div class="card">
+<h2>How the numbers are made</h2>
+<p>Every number on this site is computed or taken from a named public source &mdash; nothing is copied from another horoscope or finance site. Sky positions come from ephemeris math of the kind planetariums use, computed fresh for each page&rsquo;s date; &ldquo;retrograde&rdquo; is measured by comparing the body&rsquo;s longitude on consecutive days, not taken from folklore. Market prices, yields and rates come from public endpoints &mdash; Bitget, US Treasury, the New York Fed, the ECB and Yahoo Finance&rsquo;s public feed &mdash; and every markets page is stamped with the exact minute of its snapshot.</p>
+<p>The plain-English readings &mdash; the twelve horoscope lines and the What happened / Why / Tomorrow market notes &mdash; are written daily by an AI from those same computed numbers. Where a claim is astrology rather than astronomy, the page says so; where a page is about finance, it says that nothing on it is investment advice. The site&rsquo;s bias is to show the machinery: what is a fact layer and what is a story layer is labelled on each page.</p>
+</div>
+
+<div class="card">
+<h2>Who is behind it</h2>
+<p>sok.lv is written and maintained by the person behind the <a href="https://www.youtube.com/channel/UC7WKNYA4l_NDQjVQEaKJJ3w">KraSer YouTube channel</a>, with help from the same AI tools that write the daily readings. It carries no third-party advertising beyond Google AdSense, sells nothing, and does not collect anything beyond what the <a href="https://www.sok.lv/privacy/">privacy policy</a> describes.</p>
+<p>The fastest way to reach the desk is a comment or message on the KraSer YouTube channel &mdash; real questions from real readers are the best bug reports.</p>
+</div>
+
+<div class="card">
+<h2>What it is not</h2>
+<p>It is not a news agency, a financial adviser or an astrology service. It is a small, honest desk that computes the sky, reads the tape, and writes down both in plain language &mdash; every day, in the open, kept in an <a href="https://www.sok.lv/archive/">archive</a> you can check against yesterday&rsquo;s page.</p>
+</div>
+
+<p><a href="https://www.sok.lv/">&larr; sok.lv</a></p>
+<footer>&copy; 2026 sok.lv &middot; <a href="https://www.sok.lv/">home</a> &middot; <a href="https://www.sok.lv/horoscope/">sky</a> &middot; <a href="https://www.sok.lv/markets/">markets</a> &middot; <a href="https://www.sok.lv/paper/">paper</a> &middot; <a href="https://www.sok.lv/archive/">archive</a> &middot; <a href="https://www.sok.lv/about/">about</a> &middot; <a href="https://www.sok.lv/privacy/">privacy</a></footer>
+</main>
+</body>
+</html>
