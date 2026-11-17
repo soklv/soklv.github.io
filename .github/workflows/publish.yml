@@ -3,6 +3,14 @@ name: publish
 # www.sok.lv publishing (2026-11-03). Groundwork stage: deploy the static
 # landing as-is. Content decisions (S3) belong to kraser; this workflow keeps
 # working unchanged as long as the site stays a static tree in repo root.
+#
+# 2026-11-17: actions bumped to node24 majors (checkout v5 / upload-pages-artifact
+# v5 / deploy-pages v5 - closes the "Node.js 20 deprecated" warning band) and the
+# deploy step got a one-shot retry. Run #56 (17.11) died in the deploy job with
+# "Artifact named github-pages was not found / getArtifactMetadata" while the
+# artifact itself (33.1 KB) was uploaded fine - known transient deploy-pages flake,
+# a manual retrigger push went green (#57). Now the workflow self-heals instead of
+# needing a retrigger commit (playbook: zai v6/SOKLV_STEP.md, deploy-fail section).
 
 on:
   push:
@@ -23,15 +31,40 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment2.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+        id: co
+        continue-on-error: true      # transient runner flake (red #251 class)
+      - name: checkout retry (once, on transient failure)
+        if: steps.co.outcome == 'failure'
+        uses: actions/checkout@v5
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: .
 
-      - name: Deploy to GitHub Pages
+      # deploy-pages occasionally fails to fetch artifact metadata right after
+      # upload (run #56, 2026-11-17, "getArtifactMetadata"). Attempt 1 tolerates
+      # the transient failure; attempt 2 runs after a 30s cooldown; the run goes
+      # red only if both attempts fail.
+      - name: Deploy to GitHub Pages (attempt 1)
         id: deployment
-        uses: actions/deploy-pages@v4
+        continue-on-error: true
+        uses: actions/deploy-pages@v5
+
+      - name: Deploy cooldown (transient flake)
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 30
+
+      - name: Deploy to GitHub Pages (attempt 2)
+        id: deployment2
+        if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+
+      - name: Both deploy attempts failed
+        if: steps.deployment.outcome == 'failure' && steps.deployment2.outcome == 'failure'
+        run: |
+          echo "::error::deploy-pages failed twice (getArtifactMetadata transient class persisted)"
+          exit 1
