@@ -6,10 +6,10 @@
  "warmup_archive": "paper/archive/warmup-2026-11-04.json",
  "start_cash": 1000.0,
  "fee_rate": 0.001,
- "cash": 154.42562862807648,
+ "cash": 139.5,
  "positions": {
   "ETHUSDT": {
-   "qty": 0.00064435,
+   "qty": 0.00032217,
    "avg_cost": 2424.92
   },
   "XAUTUSDT": {
@@ -21,8 +21,8 @@
    "avg_cost": 53119.98
   },
   "DE40": {
-   "qty": 0.00989587,
-   "avg_cost": 26541.37
+   "qty": 0.01047957,
+   "avg_cost": 26542.11
   },
   "HK50": {
    "qty": 0.01164067,
@@ -319,60 +319,90 @@
    "fee": 0.0012,
    "cash_after": 154.43,
    "reason": "7d return -19.2% < -8% -> cut position in half (rules v1.6)"
+  },
+  {
+   "date": "2026-11-16",
+   "kind": "live",
+   "action": "SELL",
+   "symbol": "ETHUSDT",
+   "qty": 0.00032218,
+   "price": 1793.4,
+   "fee": 0.0006,
+   "cash_after": 155.0,
+   "reason": "7d return -11.4% < -8% -> cut position in half (rules v1.6)"
+  },
+  {
+   "date": "2026-11-16",
+   "kind": "live",
+   "action": "BUY",
+   "symbol": "DE40",
+   "qty": 0.0005837,
+   "price": 26528.18,
+   "fee": 0.0155,
+   "cash_after": 139.5,
+   "reason": "7d +1.6% > +1% and close > 30d average (25772)"
   }
  ],
  "equity_history": [
   {
    "date": "2026-11-04",
-   "equity": 984.17
+   "equity": 984.1
   },
   {
    "date": "2026-11-05",
-   "equity": 973.27
+   "equity": 972.88
   },
   {
    "date": "2026-11-06",
-   "equity": 971.08
+   "equity": 970.42
   },
   {
    "date": "2026-11-07",
-   "equity": 970.92
+   "equity": 970.26
   },
   {
    "date": "2026-11-08",
-   "equity": 972.78
+   "equity": 972.16
   },
   {
    "date": "2026-11-09",
-   "equity": 979.31
+   "equity": 979.18
   },
   {
    "date": "2026-11-10",
-   "equity": 977.05
+   "equity": 976.96
   },
   {
    "date": "2026-11-11",
-   "equity": 972.59
+   "equity": 972.65
   },
   {
    "date": "2026-11-12",
-   "equity": 969.47
+   "equity": 969.52
   },
   {
    "date": "2026-11-13",
-   "equity": 966.83
+   "equity": 966.98
   },
   {
    "date": "2026-11-14",
-   "equity": 966.36
+   "equity": 966.51
+  },
+  {
+   "date": "2026-11-15",
+   "equity": 967.86
+  },
+  {
+   "date": "2026-11-16",
+   "equity": 961.81
   }
  ],
- "last_processed": "2026-11-14",
+ "last_processed": "2026-11-16",
  "review": {
-  "checked_utc": "2026-11-15 20:36 UTC",
+  "checked_utc": "2026-11-17 10:54 UTC",
   "checks": {
    "ledger": "PASS",
-   "equity": "FIXED (max drift 1.14 USDT)",
+   "equity": "FIXED (max drift 0.66 USDT)",
    "rules": "PASS",
    "fresh": "PASS",
    "page": "PASS",
@@ -382,14 +412,14 @@
    "equity_history recomputed from real closes"
   ],
   "analytics": {
-   "pnl_pct": -3.36,
-   "hold_btc_pct": -14.94,
-   "hold_eth_pct": -19.69,
-   "max_drawdown_pct": -3.36,
+   "pnl_pct": -3.82,
+   "hold_btc_pct": -15.64,
+   "hold_eth_pct": -20.46,
+   "max_drawdown_pct": -3.82,
    "sell_win_rate": 0.0,
-   "fees_usdt": 1.01,
-   "avg_exposure_pct": 66.0,
-   "window": "2026-11-04..2026-11-14"
+   "fees_usdt": 1.03,
+   "avg_exposure_pct": 69.0,
+   "window": "2026-11-04..2026-11-16"
   },
   "verdict": "OK"
  }
