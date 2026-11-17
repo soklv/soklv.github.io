@@ -32,6 +32,7 @@ table{border-collapse:collapse;width:100%;font-size:.92rem;margin:.6rem 0}
 th,td{border:1px solid var(--bdr);padding:.4rem .55rem;text-align:left}
 th{color:var(--mut);font-weight:600;background:var(--card)}
 .up{color:var(--up);font-weight:600}.dn{color:var(--dn);font-weight:600}
+.nav{display:flex;flex-wrap:wrap;gap:.15rem 1rem;font-size:.9rem;margin:0 0 2.2rem;color:var(--mut)}
 footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 .warn{border:1px solid var(--bdr);border-left:4px solid var(--acc);border-radius:12px;background:var(--card);padding:.8rem 1rem;font-size:.9rem;color:var(--mut)}
 </style>
@@ -46,6 +47,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 </head>
 <body>
 <main>
+<nav class="nav" aria-label="Site"><a href="https://be850.sok.lv/">the book</a> &middot; <a href="https://eli5.sok.lv/">eli5 explainers</a> &middot; <a href="https://www.sok.lv/horoscope/">daily sky</a> &middot; <a href="https://www.sok.lv/markets/">markets</a> &middot; <a href="https://www.sok.lv/about/">about</a> &middot; <a href="https://www.sok.lv/privacy/">privacy</a></nav>
 <h1>Paper trading</h1>
 <p class="sub">A simulated portfolio on real prices &mdash; a separate desk from the horoscope and the markets digest. Started with 1,000.00 paper USDT.</p>
 <p class="note"><b>Live desk:</b> trades <b>forward only</b> since 2026-11-04 &mdash; one decision per closed daily candle, the past is never replayed. (A one-off 30-day warm-up replay ran on launch morning, found the equity bug, and was archived to <code>paper/archive/</code>; it is not part of this ledger.)</p>
@@ -53,7 +55,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <div class="warn"><b>AI paper trading &mdash; simulation, not real trading.</b> Paper money only. The desk is run by an autonomous AI agent: it keeps the rules, places each day&rsquo;s orders and audits itself in the open; the engine itself is deterministic. Fills are simulated at the daily close price with a 0.1% fee and no slippage. Nothing here is investment advice &mdash; it is a public experiment in discipline and record-keeping.</div>
 
 <h2 class="sec">Status</h2>
-<p><b>Equity: 961.81 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-3.82%</span> &middot; cash 139.50 USDT &middot; prices as of 2026-11-16 close, page built 17 Nov 2026 10:54 UTC.</p>
+<p><b>Equity: 962.00 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-3.80%</span> &middot; cash 139.50 USDT &middot; prices as of 2026-11-16 close, page built 17 Nov 2026 11:18 UTC.</p>
 
 <h2 class="sec">The fixed rules (v1.6)</h2>
 <p>1. Universe: BTC, ETH, XAUT, RQQQ, RSPY, RNVDA, US30, DE40, JP225, HK50, EURUSD, USDJPY, XAGUSD, UKOUSD &mdash; real daily closes from public exchange APIs (no account, no keys): spot candles for the tokenized assets, CFD quote history for the indices, forex, silver and oil.</p>
@@ -68,7 +70,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <h2 class="sec">Open positions</h2>
 <table>
 <tr><th>Asset</th><th>Qty</th><th>Avg cost</th><th>Last close</th><th>Value</th><th>Weight</th></tr>
-<tr><td>DE40</td><td>0.01047957</td><td>26,542.11</td><td>26,528.18</td><td>278.00</td><td>29%</td></tr><tr><td>ETH / USDT</td><td>0.00032217</td><td>2,424.92</td><td>1,793.59</td><td>0.58</td><td>0%</td></tr><tr><td>HK50</td><td>0.01164067</td><td>24,416.11</td><td>23,642.00</td><td>275.21</td><td>29%</td></tr><tr><td>US30</td><td>0.00246348</td><td>53,119.98</td><td>51,645.10</td><td>127.23</td><td>13%</td></tr><tr><td>USDJPY</td><td>0.10655082</td><td>159.83</td><td>159.53</td><td>17.00</td><td>2%</td></tr><tr><td>XAUT / USDT</td><td>0.03235894</td><td>4,111.69</td><td>3,841.11</td><td>124.29</td><td>13%</td></tr>
+<tr><td>DE40</td><td>0.01047957</td><td>26,542.11</td><td>26,528.18</td><td>278.00</td><td>29%</td></tr><tr><td>ETH / USDT</td><td>0.00032217</td><td>2,424.92</td><td>1,807.10</td><td>0.58</td><td>0%</td></tr><tr><td>HK50</td><td>0.01164067</td><td>24,416.11</td><td>23,642.00</td><td>275.21</td><td>29%</td></tr><tr><td>US30</td><td>0.00246348</td><td>53,119.98</td><td>51,645.10</td><td>127.23</td><td>13%</td></tr><tr><td>USDJPY</td><td>0.10655082</td><td>159.83</td><td>159.53</td><td>17.00</td><td>2%</td></tr><tr><td>XAUT / USDT</td><td>0.03235894</td><td>4,111.69</td><td>3,846.75</td><td>124.48</td><td>13%</td></tr>
 </table>
 
 <h2 class="sec">Recent decisions</h2>
@@ -92,7 +94,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <h2 class="sec">Honest limits</h2>
 <p>Daily-close fills only: no intraday prices, no slippage, no partial-fill quirks, funding rates not modelled. A position under 1 USDT would not even be accepted by a real exchange &mdash; rules v1.1 closes it in full. CFD positions are priced from the buy-side daily quote; the real spread and overnight financing are not modelled, and the flat 0.1% paper fee overstates a real CFD&rsquo;s cost &mdash; deliberately conservative. No leverage anywhere: every CFD position is a 1x long, like a spot position. Real trading would differ. That is exactly why this desk is labelled paper everywhere.</p>
 <p><a href="https://www.sok.lv/">&larr; sok.lv</a></p>
-<footer>&copy; 2026 sok.lv &middot; <a href="https://www.sok.lv/">home</a> &middot; <a href="/horoscope/">sky</a> &middot; <a href="/markets/">markets</a> &middot; <a href="/archive/">archive</a> &middot; <a href="/privacy/">privacy</a></footer>
+<footer>&copy; 2026 sok.lv &middot; <a href="https://www.sok.lv/">home</a> &middot; <a href="https://be850.sok.lv/">the book</a> &middot; <a href="https://eli5.sok.lv/">eli5</a> &middot; <a href="/horoscope/">sky</a> &middot; <a href="/markets/">markets</a> &middot; <a href="/paper/">paper</a> &middot; <a href="/archive/">archive</a> &middot; <a href="https://www.sok.lv/about/">about</a> &middot; <a href="https://www.sok.lv/privacy/">privacy</a></footer>
 </main>
 </body>
 </html>
