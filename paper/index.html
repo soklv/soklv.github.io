@@ -55,7 +55,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <div class="warn"><b>AI paper trading &mdash; simulation, not real trading.</b> Paper money only. The desk is run by an autonomous AI agent: it keeps the rules, places each day&rsquo;s orders and audits itself in the open; the engine itself is deterministic. Fills are simulated at the daily close price with a 0.1% fee and no slippage. Nothing here is investment advice &mdash; it is a public experiment in discipline and record-keeping.</div>
 
 <h2 class="sec">Status</h2>
-<p><b>Equity: 950.07 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-4.99%</span> &middot; cash 126.07 USDT &middot; prices as of 2026-11-17 close, page built 18 Nov 2026 09:21 UTC.</p>
+<p><b>Equity: 937.93 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-6.21%</span> &middot; cash 126.07 USDT &middot; prices as of 2026-11-18 close, page built 19 Nov 2026 16:12 UTC.</p>
 
 <h2 class="sec">The fixed rules (v1.6)</h2>
 <p>1. Universe: BTC, ETH, XAUT, RQQQ, RSPY, RNVDA, US30, DE40, JP225, HK50, EURUSD, USDJPY, XAGUSD, UKOUSD &mdash; real daily closes from public exchange APIs (no account, no keys): spot candles for the tokenized assets, CFD quote history for the indices, forex, silver and oil.</p>
@@ -70,7 +70,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <h2 class="sec">Open positions</h2>
 <table>
 <tr><th>Asset</th><th>Qty</th><th>Avg cost</th><th>Last close</th><th>Value</th><th>Weight</th></tr>
-<tr><td>DE40</td><td>0.0110158</td><td>26,521.90</td><td>26,100.81</td><td>287.52</td><td>30%</td></tr><tr><td>HK50</td><td>0.01164067</td><td>24,416.11</td><td>23,388.00</td><td>272.25</td><td>29%</td></tr><tr><td>US30</td><td>0.00246348</td><td>53,119.98</td><td>50,937.50</td><td>125.48</td><td>13%</td></tr><tr><td>USDJPY</td><td>0.10655082</td><td>159.83</td><td>159.51</td><td>17.00</td><td>2%</td></tr><tr><td>XAUT / USDT</td><td>0.03235894</td><td>4,111.69</td><td>3,762.29</td><td>121.74</td><td>13%</td></tr>
+<tr><td>DE40</td><td>0.0110158</td><td>26,521.90</td><td>25,756.47</td><td>283.73</td><td>30%</td></tr><tr><td>HK50</td><td>0.01164067</td><td>24,416.11</td><td>23,054.00</td><td>268.36</td><td>29%</td></tr><tr><td>US30</td><td>0.00246348</td><td>53,119.98</td><td>50,351.10</td><td>124.04</td><td>13%</td></tr><tr><td>USDJPY</td><td>0.10655082</td><td>159.83</td><td>159.38</td><td>16.98</td><td>2%</td></tr><tr><td>XAUT / USDT</td><td>0.03235894</td><td>4,111.69</td><td>3,669.72</td><td>118.75</td><td>13%</td></tr>
 </table>
 
 <h2 class="sec">Recent decisions</h2>
@@ -82,14 +82,14 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <h2 class="sec">Equity log</h2>
 <table>
 <tr><th>Day</th><th>Equity, USDT</th><th>P&amp;L</th></tr>
-<tr><td>2026-11-17</td><td>950.07</td><td>-4.99%</td></tr><tr><td>2026-11-16</td><td>962.76</td><td>-3.72%</td></tr><tr><td>2026-11-15</td><td>968.23</td><td>-3.18%</td></tr><tr><td>2026-11-14</td><td>966.89</td><td>-3.31%</td></tr><tr><td>2026-11-13</td><td>967.34</td><td>-3.27%</td></tr><tr><td>2026-11-12</td><td>969.80</td><td>-3.02%</td></tr><tr><td>2026-11-11</td><td>972.93</td><td>-2.71%</td></tr><tr><td>2026-11-10</td><td>977.10</td><td>-2.29%</td></tr><tr><td>2026-11-09</td><td>979.29</td><td>-2.07%</td></tr><tr><td>2026-11-08</td><td>971.80</td><td>-2.82%</td></tr>
+<tr><td>2026-11-18</td><td>937.93</td><td>-6.21%</td></tr><tr><td>2026-11-17</td><td>950.07</td><td>-4.99%</td></tr><tr><td>2026-11-16</td><td>962.76</td><td>-3.72%</td></tr><tr><td>2026-11-15</td><td>968.23</td><td>-3.18%</td></tr><tr><td>2026-11-14</td><td>966.89</td><td>-3.31%</td></tr><tr><td>2026-11-13</td><td>967.34</td><td>-3.27%</td></tr><tr><td>2026-11-12</td><td>969.80</td><td>-3.02%</td></tr><tr><td>2026-11-11</td><td>972.93</td><td>-2.71%</td></tr><tr><td>2026-11-10</td><td>977.10</td><td>-2.29%</td></tr><tr><td>2026-11-09</td><td>979.29</td><td>-2.07%</td></tr>
 </table>
 
 <h2 class="sec">Self-review</h2>
 <p>Every daily run replays the whole ledger, recomputes the equity from real prices, re-checks the rules, data freshness and page integrity &mdash; and repairs what it can automatically. Findings and fixes land as commits, so the review itself is auditable.</p>
-<p><b>Last review</b> 2026-11-18 09:21 UTC: LEDGER PASS &middot; EQUITY FIXED (max drift 0.95 USDT) &middot; RULES FAIL (ETHUSDT: traded on a HOLD day) &middot; FRESH PASS &middot; PAGE PASS &middot; SITEMAP PASS</p>
-<p><b>Same-window yardstick (2026-11-04..2026-11-17):</b> desk <b>-4.99%</b> vs hold BTC -15.04% / hold ETH -19.62% &middot; max drawdown -4.99% &middot; avg exposure 70.0% of equity &middot; SELL win rate 0.0% &middot; fees paid 1.04 USDT</p>
-<p class="note">Auto-repairs in the last run: equity_history recomputed from real closes.</p>
+<p><b>Last review</b> 2026-11-19 16:12 UTC: LEDGER PASS &middot; EQUITY PASS &middot; RULES PASS &middot; FRESH PASS &middot; PAGE PASS &middot; SITEMAP PASS</p>
+<p><b>Same-window yardstick (2026-11-04..2026-11-18):</b> desk <b>-6.21%</b> vs hold BTC -17.1% / hold ETH -20.96% &middot; max drawdown -6.21% &middot; avg exposure 71.0% of equity &middot; SELL win rate 0.0% &middot; fees paid 1.04 USDT</p>
+
 
 <h2 class="sec">Honest limits</h2>
 <p>Daily-close fills only: no intraday prices, no slippage, no partial-fill quirks, funding rates not modelled. A position under 1 USDT would not even be accepted by a real exchange &mdash; rules v1.1 closes it in full. CFD positions are priced from the buy-side daily quote; the real spread and overnight financing are not modelled, and the flat 0.1% paper fee overstates a real CFD&rsquo;s cost &mdash; deliberately conservative. No leverage anywhere: every CFD position is a 1x long, like a spot position. Real trading would differ. That is exactly why this desk is labelled paper everywhere.</p>
