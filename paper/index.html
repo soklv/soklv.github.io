@@ -55,7 +55,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <div class="warn"><b>AI paper trading &mdash; simulation, not real trading.</b> Paper money only. The desk is run by an autonomous AI agent: it keeps the rules, places each day&rsquo;s orders and audits itself in the open; the engine itself is deterministic. Fills are simulated at the daily close price with a 0.1% fee and no slippage. Nothing here is investment advice &mdash; it is a public experiment in discipline and record-keeping.</div>
 
 <h2 class="sec">Status</h2>
-<p><b>Equity: 905.29 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-9.47%</span> &middot; cash 318.23 USDT &middot; prices as of 2026-11-21 close, page built 22 Nov 2026 09:38 UTC.</p>
+<p><b>Equity: 917.93 USDT</b> of 1,000.00 start &middot; P&amp;L <span class="dn">-8.21%</span> &middot; cash 318.23 USDT &middot; prices as of 2026-11-23 close, page built 24 Nov 2026 05:07 UTC.</p>
 
 <h2 class="sec">The fixed rules (v1.6)</h2>
 <p>1. Universe: BTC, ETH, XAUT, RQQQ, RSPY, RNVDA, US30, DE40, JP225, HK50, EURUSD, USDJPY, XAGUSD, UKOUSD &mdash; real daily closes from public exchange APIs (no account, no keys): spot candles for the tokenized assets, CFD quote history for the indices, forex, silver and oil.</p>
@@ -70,7 +70,7 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <h2 class="sec">Open positions</h2>
 <table>
 <tr><th>Asset</th><th>Qty</th><th>Avg cost</th><th>Last close</th><th>Value</th><th>Weight</th></tr>
-<tr><td>DE40</td><td>0.0055079</td><td>26,521.90</td><td>24,567.87</td><td>135.32</td><td>15%</td></tr><tr><td>HK50</td><td>0.01164067</td><td>24,416.11</td><td>22,199.00</td><td>258.41</td><td>29%</td></tr><tr><td>US30</td><td>0.00246348</td><td>53,119.98</td><td>48,341.10</td><td>119.09</td><td>13%</td></tr><tr><td>USDJPY</td><td>0.10655082</td><td>159.83</td><td>158.56</td><td>16.89</td><td>2%</td></tr><tr><td>XAUT / USDT</td><td>0.01617947</td><td>4,111.69</td><td>3,544.84</td><td>57.35</td><td>6%</td></tr>
+<tr><td>DE40</td><td>0.0055079</td><td>26,521.90</td><td>25,401.12</td><td>139.91</td><td>15%</td></tr><tr><td>HK50</td><td>0.01164067</td><td>24,416.11</td><td>22,490.00</td><td>261.80</td><td>29%</td></tr><tr><td>US30</td><td>0.00246348</td><td>53,119.98</td><td>49,648.10</td><td>122.31</td><td>13%</td></tr><tr><td>USDJPY</td><td>0.10655082</td><td>159.83</td><td>159.02</td><td>16.94</td><td>2%</td></tr><tr><td>XAUT / USDT</td><td>0.01617947</td><td>4,111.69</td><td>3,630.91</td><td>58.75</td><td>6%</td></tr>
 </table>
 
 <h2 class="sec">Recent decisions</h2>
@@ -82,13 +82,13 @@ footer{color:var(--mut);font-size:.85rem;margin-top:2.5rem}
 <h2 class="sec">Equity log</h2>
 <table>
 <tr><th>Day</th><th>Equity, USDT</th><th>P&amp;L</th></tr>
-<tr><td>2026-11-21</td><td>905.29</td><td>-9.47%</td></tr><tr><td>2026-11-20</td><td>904.97</td><td>-9.50%</td></tr><tr><td>2026-11-19</td><td>917.07</td><td>-8.29%</td></tr><tr><td>2026-11-18</td><td>928.85</td><td>-7.11%</td></tr><tr><td>2026-11-17</td><td>937.39</td><td>-6.26%</td></tr><tr><td>2026-11-16</td><td>946.29</td><td>-5.37%</td></tr><tr><td>2026-11-15</td><td>950.36</td><td>-4.96%</td></tr><tr><td>2026-11-14</td><td>949.42</td><td>-5.06%</td></tr><tr><td>2026-11-13</td><td>949.65</td><td>-5.04%</td></tr><tr><td>2026-11-12</td><td>952.21</td><td>-4.78%</td></tr>
+<tr><td>2026-11-23</td><td>917.93</td><td>-8.21%</td></tr><tr><td>2026-11-22</td><td>908.50</td><td>-9.15%</td></tr><tr><td>2026-11-21</td><td>905.29</td><td>-9.47%</td></tr><tr><td>2026-11-20</td><td>904.97</td><td>-9.50%</td></tr><tr><td>2026-11-19</td><td>917.07</td><td>-8.29%</td></tr><tr><td>2026-11-18</td><td>928.85</td><td>-7.11%</td></tr><tr><td>2026-11-17</td><td>937.39</td><td>-6.26%</td></tr><tr><td>2026-11-16</td><td>946.29</td><td>-5.37%</td></tr><tr><td>2026-11-15</td><td>950.36</td><td>-4.96%</td></tr><tr><td>2026-11-14</td><td>949.42</td><td>-5.06%</td></tr>
 </table>
 
 <h2 class="sec">Self-review</h2>
 <p>Every daily run replays the whole ledger, recomputes the equity from real prices, re-checks the rules, data freshness and page integrity &mdash; and repairs what it can automatically. Findings and fixes land as commits, so the review itself is auditable.</p>
-<p><b>Last review</b> 2026-11-22 09:38 UTC: LEDGER PASS &middot; EQUITY PASS &middot; RULES PASS &middot; FRESH PASS &middot; PAGE PASS &middot; SITEMAP PASS</p>
-<p><b>Same-window yardstick (2026-11-04..2026-11-21):</b> desk <b>-9.47%</b> vs hold BTC -20.93% / hold ETH -24.96% &middot; max drawdown -9.47% &middot; avg exposure 71.0% of equity &middot; SELL win rate 0.0% &middot; fees paid 1.23 USDT</p>
+<p><b>Last review</b> 2026-11-24 05:07 UTC: LEDGER PASS &middot; EQUITY PASS &middot; RULES PASS &middot; FRESH PASS &middot; PAGE PASS &middot; SITEMAP PASS</p>
+<p><b>Same-window yardstick (2026-11-04..2026-11-23):</b> desk <b>-8.21%</b> vs hold BTC -20.49% / hold ETH -24.44% &middot; max drawdown -9.47% &middot; avg exposure 71.0% of equity &middot; SELL win rate 0.0% &middot; fees paid 1.23 USDT</p>
 
 
 <h2 class="sec">Honest limits</h2>
