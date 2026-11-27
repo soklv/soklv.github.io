@@ -466,15 +466,23 @@
   },
   {
    "date": "2026-11-24",
-   "equity": 913.76
+   "equity": 912.75
+  },
+  {
+   "date": "2026-11-25",
+   "equity": 912.82
+  },
+  {
+   "date": "2026-11-26",
+   "equity": 914.52
   }
  ],
- "last_processed": "2026-11-24",
+ "last_processed": "2026-11-26",
  "review": {
-  "checked_utc": "2026-11-25 13:16 UTC",
+  "checked_utc": "2026-11-27 20:02 UTC",
   "checks": {
    "ledger": "PASS",
-   "equity": "FIXED (max drift 1.16 USDT)",
+   "equity": "FIXED (max drift 1.01 USDT)",
    "rules": "PASS",
    "fresh": "PASS",
    "page": "PASS",
@@ -484,14 +492,14 @@
    "equity_history recomputed from real closes"
   ],
   "analytics": {
-   "pnl_pct": -8.62,
-   "hold_btc_pct": -22.78,
-   "hold_eth_pct": -26.85,
+   "pnl_pct": -8.55,
+   "hold_btc_pct": -21.03,
+   "hold_eth_pct": -25.83,
    "max_drawdown_pct": -9.47,
    "sell_win_rate": 0.0,
    "fees_usdt": 1.23,
    "avg_exposure_pct": 70.0,
-   "window": "2026-11-04..2026-11-24"
+   "window": "2026-11-04..2026-11-26"
   },
   "verdict": "OK"
  }
